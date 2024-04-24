@@ -1,0 +1,195 @@
+.pharmacymaindiv {
+  @media (max-width: 576px) {
+    .physiointro {
+      .physioh2 {
+        top: 1% !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .imagetext.position-absolute {
+      background-color: #7365ad;
+      color: #fff !important;
+      border-radius: 20px !important;
+      padding: 40px !important;
+      bottom: 10px !important;
+      right: 146px !important;
+      top: 90px !important;
+      position: relative !important;
+    }
+  }
+
+  @media screen and (max-width: 601px) {
+    .imagetext.position-absolute {
+      background-color: #7365ad;
+      color: #fff !important;
+      border-radius: 20px !important;
+      padding: 40px !important;
+      top: 90px !important;
+      right: 0px !important;
+      position: relative !important;
+    }
+  }
+
+  @media screen and (min-width: 602px) and (max-width: 767px) {
+    .imagetext.position-absolute {
+      position: relative;
+      top: 0px;
+      right: 0px !important;
+    }
+  }
+  .p-57 {
+    padding: 57px;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .medications {
+    color: #6246d9;
+  }
+
+  .rounded_corners {
+    position: absolute;
+    bottom: -10px;
+  }
+
+  .secondsection {
+    .healthandsafety {
+      color: #967cff;
+    }
+
+    .medications {
+      color: #6246d9;
+    }
+
+    .backgroundgrey {
+      background-color: #f1f6ff;
+    }
+
+    .py-57 {
+      padding-top: 57px;
+      padding-bottom: 57px;
+    }
+
+    .mb-28 {
+      margin-bottom: 28px !important;
+    }
+
+    .qualifiedpharmacists {
+      color: #967cff;
+    }
+
+    .backgroundpink {
+      background-color: #f4f1ff;
+    }
+
+    .rounded_div {
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .whyusbanner {
+      position: absolute;
+      width: 50%;
+      left: 45%;
+      margin-top: 5% !important;
+      min-height: 320px;
+    }
+
+    .positiontrying {
+      position: relative;
+    }
+  }
+
+  .widthheight {
+    width: 660;
+    height: 412;
+  }
+
+  .paragraph {
+    padding: 1em 0em !important;
+    margin: 0em 1em !important;
+  }
+
+  .positionrelative {
+    position: relative !important;
+  }
+
+  .physiofirstdescription {
+    position: absolute !important;
+    top: 50px !important;
+
+    .description {
+      margin-bottom: 30px !important;
+
+      h2 {
+        color: #fff;
+        font-size: 16px !important;
+        font-weight: 500;
+      }
+    }
+
+    .paragraph {
+      padding: 1em 0em !important;
+      margin: 0em 1em !important;
+    }
+  }
+
+  .physiointro {
+    position: relative;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .physioh2 {
+      position: absolute;
+      top: 25%;
+      width: 100%;
+
+      h1 {
+        color: #fff;
+      }
+    }
+  }
+}
+@media screen and (min-width: 578px) and (max-width: 2400px) {
+  .physiopara {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 58px;
+  }
+}
+.physiopara p {
+  border-radius: 15px;
+  color: #000;
+  background: rgb(255, 255, 255);
+  margin-top: 30px !important;
+  padding: 3em;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .ms-5 {
+    margin-left: 3rem !important;
+  }
+  .me-5 {
+    margin-right: 3rem !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ms-5 {
+    margin-left: 0rem !important;
+  }
+  .me-5 {
+    margin-right: 0rem !important;
+  }
+}

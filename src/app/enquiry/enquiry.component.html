@@ -1,0 +1,254 @@
+<div class="container">
+    <div class="modal-dialog modal-dialog-centered modalbackdrop">
+        <div class="modal mainmodal" *ngIf="modalService.showModal" id="myModal" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div *ngIf="showform" class="modal-content">
+                <div class="row">
+                    <div class="col-12 closebtn">
+                        <i (click)="closeModal()" class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <label class="service_label">Service Enquiry</label>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <form #form="ngForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="name">First Name<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control " id="name" name="name"
+                                    formControlName="firstname" placeholder="First Name"
+                                    (keypress)="NamePattern($event)">
+                                <div
+                                    *ngIf="contactForm.controls['firstname'].touched && contactForm.controls['firstname'].invalid">
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['firstname'].hasError('required')">
+                                        First Name is required
+                                    </div>
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['firstname'].hasError('pattern')">
+                                        Invalid First Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="name">Last Name<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control " id="name" name="name"
+                                    formControlName="lastname" placeholder="Last Name" (keypress)="NamePattern($event)">
+                                <div
+                                    *ngIf="contactForm.controls['lastname'].touched && contactForm.controls['lastname'].invalid">
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['lastname'].hasError('required')">
+                                        Last Name is required
+                                    </div>
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['lastname'].hasError('pattern')">
+                                        Invalid Last Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="name">Email<span class="text-danger">*</span></label>
+                                <input type="email" class="form-control " id="email" name="email"
+                                    formControlName="email" placeholder="Email">
+                                <div
+                                    *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid">
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['email'].hasError('required')">
+                                        Email is required</div>
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['email'].hasError('pattern')">
+                                        Invalid Email
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="mobile">Mobile Number<span class="text-danger">*</span></label>
+                                <input (keypress)="phonePattern($event)" type="tel" class="form-control " id="mobile"
+                                    name="mobile" formControlName="phonenumber" maxlength="10"
+                                    placeholder="Mobile Number">
+                                <div
+                                    *ngIf="contactForm.controls['phonenumber'].touched && contactForm.controls['phonenumber'].invalid">
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['phonenumber'].hasError('required')">
+                                        Mobile Number is required</div>
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['phonenumber'].hasError('pattern')">
+                                        Mobile Number must be 10 digits
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="gender">Gender<span class="text-danger">*</span></label>
+                                <select class="form-select " aria-label="Default select example" id="gender"
+                                    name="gender" formControlName="gender">
+                                    <option value="0" selected>Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div *ngIf="contactForm.get('gender')?.invalid && contactForm.get('gender')?.touched"
+                                    class="text-danger errormsg">
+                                    Please select Gender.
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="age">Age<span class="text-danger">*</span></label>
+                                <select class="form-select " id="age" name="age" formControlName="age">
+                                    <option value="0" selected>Select Age</option>
+                                    <option *ngFor="let num of ageNumbers" [value]="num">{{ num }}</option>
+                                </select>
+                                <div *ngIf="contactForm.get('age')?.value == 0 && contactForm.get('age')?.touched"
+                                    class="text-danger errormsg">
+                                    Please select age
+                                </div>
+                                <!-- <div
+                                *ngIf="contactForm.controls['age'].touched && contactForm.controls['age'].invalid">
+                                <div class="text-danger errormsg"
+                                    *ngIf="contactForm.controls['age'].hasError('pattern')">
+                                    Please select age
+                                </div>
+                            </div> -->
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="location">Location<span class="text-danger">*</span></label>
+                                <select class="form-select " aria-label="Default select example" id="location"
+                                    name="location" formControlName="location">
+                                    <option value="0" selected>Select Location</option>
+                                    <option value="hyderabad">Hyderabad</option>
+                                    <option value="visakhapatnam">Visakhapatnam</option>
+                                </select>
+                                <div
+                                    *ngIf="contactForm.controls['location'].touched && contactForm.controls['location'].invalid">
+                                    <div class="text-danger errormsg"
+                                        *ngIf="contactForm.controls['location'].hasError('pattern')">
+                                        Please select Location
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6 col-12">
+                                <label for="service">Service<span class="text-danger">*</span></label>
+                                <select class="form-select " aria-label="Default select example" id="service"
+                                    name="service" formControlName="service">
+                                    <option value="0" selected>Select Service</option>
+                                    <option value="nursing">Nursing</option>
+                                    <option value="physio">Physiotherapy</option>
+                                    <option value="vishaka">Pharmacy</option>
+                                    <option value="transitional">Transitional Care</option>
+                                </select>
+                                <div>
+                                    <div *ngIf="contactForm.get('service')?.invalid && contactForm.get('service')?.touched"
+                                        class="text-danger errormsg">
+                                        Please select Service.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12 col-md-13 col-12">
+                                <label for="comments">Comments</label>
+                                <!-- <textarea *ngIf="getdbserviceloader" placeholder="Resolution Comments"
+                                [disabled]="!textAreaDropDownNotes" [(ngModel)]="ticketComments" value="" rows="5" #textInput
+                                maxlength="500" class="form-control border-start-0 h-auto"></textarea> -->
+                                <textarea [(ngModel)]="comments" #textInput class="form-control " maxlength="500"
+                                    id="comments" name="comments" rows="3" formControlName="comments"
+                                    placeholder="Comments"></textarea>
+                                <p class="ticketcomments text-end">{{comments?.length ?? 0}}/500</p>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row done_btn">
+                        <div class="col-12  btn_width">
+                            <button *ngIf="!showspinner" type="submit" (click)="onSubmit()"
+                                [disabled]="!contactForm.valid" class="btn submitbtn">Submit</button>
+                        </div>
+                    </div>
+                    <div class="row done_btn">
+                        <div class="col-12  btn_width">
+                            <button [disabled]="contactForm.valid" *ngIf="showspinner" type="submit"
+                                class="btn submitbtn">
+                                <div class="btn_spinner">
+                                    <div class="spinner-border " role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="showsuccess" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'success_msg.png'" alt="success_msg_ione" title="success_msg_ione" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h1>Form Submitted Successfully</h1>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+
+                        <div class="col-12 text_center">
+                            <h6 class="erro_class">Our support team will contact you shortly.</h6>
+                        </div>
+                    </div>
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn submitbtn" (click)="closeModal()">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="showerror" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'error_msg.png'" alt="error_msg_itwo" title="error_msg_itwo" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h2>Unable to Submit the Form</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn retry_btn" (click)="retryenquiry()">Retry</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="existinguser" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'error_msg.png'" alt="error_msg_ithree" title="error_msg_ithree" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h2>Multiple Entries</h2>
+                        </div>
+                    </div>
+                    <div class="col-12 text_center">
+                        <h6 class="erro_class">We have an existing
+                            enquiry associated with this mobile number. Kindly wait, and our executive will be in
+                            touch with you shortly.</h6>
+                    </div>
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn retry_btn" (click)="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

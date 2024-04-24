@@ -1,0 +1,272 @@
+.block-spacer-50 {
+  height: 50px;
+}
+
+.block-spacer-80 {
+  height: 80px;
+}
+
+.bg-brand {
+  background: #7465ad;
+}
+
+.spacer-30 {
+  height: 30px;
+}
+
+.p-48 {
+  padding: 48px;
+}
+
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+p {
+  line-height: 2;
+}
+
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.btn-brand {
+  background: #7465ad !important;
+  color: #fff;
+  padding: 12px 30px;
+  font-weight: 500;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.px-48 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pb-28 {
+  padding-bottom: 28px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+// nursing.........
+.bg-gray {
+  background: #f4f1ff !important;
+}
+
+.py-57 {
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+
+.section {
+  background: #f4f8ff;
+}
+
+.nursing-brandColor {
+  color: #967cff;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mx-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.contact-us {
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  border-radius: 9999px;
+  background-color: #7465ad !important;
+  font-size: 1.125rem;
+  color: #fff !important;
+}
+
+.second-section {
+  background: linear-gradient(
+    180deg,
+    rgb(236, 230, 255) 0%,
+    rgb(171, 163, 244) 100%
+  );
+}
+
+.p-48 {
+  padding: 48px;
+}
+
+ul.ticklist {
+  li::marker {
+    content: "\f058";
+    padding-right: 20px;
+    line-height: 35px;
+    font-family: "Font Awesome 6 Free";
+    color: #7465ad;
+    margin-top: -5px;
+    font-weight: 900;
+  }
+
+  li::before {
+    padding-right: 20px;
+    // content: "";
+    line-height: 2.15;
+  }
+}
+
+ul.handlist {
+  li::marker {
+    content: "\F402" !important;
+    padding-right: 20px !important;
+    padding-top: 13px;
+    line-height: 35px !important;
+    font-family: "Font Awesome 6 Free" !important;
+    color: #ff8800 !important;
+    margin-top: -5px !important;
+    font-weight: 300 !important;
+  }
+
+  li::before {
+    padding-right: 20px !important;
+    content: "\f402" !important;
+    padding-top: 13px;
+    line-height: 2.15 !important;
+    color: #ff8800 !important;
+    // transform: rotate(90deg) !important;
+  }
+}
+
+.fourth-section {
+  background: #967cff;
+}
+
+ul.handlist {
+  li::marker {
+    content: "\f0a4";
+    padding-right: 20px;
+    line-height: 35px;
+    font-family: "Font Awesome 6 Free";
+    color: #ff8800;
+    margin-top: -5px;
+    font-weight: 300;
+  }
+
+  li::before {
+    padding-right: 20px;
+    content: "";
+    line-height: 2.15;
+  }
+}
+
+ul.handlist li {
+  align-items: flex-start !important;
+}
+
+// .nursing-sec-4-img {
+//   width: 100%;
+//   height: 100%;
+//   text-align: center;
+// }
+// .nursing-sec-5-img {
+//   width: 100%;
+//   height: 407px;
+//   text-align: center;
+// }
+.fifth-section {
+  bottom: 41px;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.sixth-section {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+  background: #7465ad;
+}
+
+.qrcode {
+  width: 144px;
+  height: 144px;
+}
+
+@media screen and (min-width: 660px) {
+  .mobiles .position-absolute {
+    bottom: 75px !important;
+    position: absolute !important;
+  }
+
+  .section {
+    margin: 0px 50px;
+  }
+
+  .second-section {
+    margin: 0px 50px 28px 50px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .mobiles .position-absolute {
+    bottom: 0px !important;
+    position: relative !important;
+  }
+
+  .section {
+    margin: 0px 0px;
+  }
+
+  .second-section {
+    margin: 0px 0px 28px 0px;
+  }
+}
+
+@media screen and (min-width: 660px) and (max-width: 767px) {
+  .mobiles .position-absolute {
+    bottom: 0px !important;
+    position: relative !important;
+  }
+
+  .section {
+    margin: 0px 0px;
+  }
+
+  .second-section {
+    margin: 0px 0px 28px 0px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section {
+    margin: 0px 0px;
+  }
+
+  .second-section {
+    margin: 0px 0px 28px 0px;
+  }
+}
+
+button.brand-bgcolor:hover {
+  background-color: #fff !important;
+  border: 1px solid #7465ad !important;
+  color: #7465ad !important;
+}

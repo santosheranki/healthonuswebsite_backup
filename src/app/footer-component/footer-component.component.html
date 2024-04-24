@@ -1,0 +1,127 @@
+<footer class="padding_top border-top brd-gray footerdiv">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="houinfo">
+                    <div class="items mb-4">
+                        <a [routerLink]="['/home']">
+                            <img class="logo_img img-fluid cursorpointer"
+                                [src]="environment?.websiteassetsURL + 'homepage/houlogog.png'" alt="houlogog_ione"
+                                title="houlogog_ione">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 colorsfffwhite fontw600 allataghover">
+                <h1 class="font_h4">Quick Links</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/home']">Home</a></div>
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/about-us']">About us</a></div>
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/homecare-services/nursing']">Nursing
+                                Care</a>
+                        </div>
+                        <div><a class="colors9A9A9A fontw400"
+                                [routerLink]="['/homecare-services/physiotherapy']">Physiotherapy</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+
+                        <div><a class="colors9A9A9A fontw400"
+                                [routerLink]="['/homecare-services/pharmacy']">Pharmacy</a>
+                        </div>
+                        <div><a class="colors9A9A9A fontw400"
+                                [routerLink]="['/post-hospitalization-care/transition-care']">Transition
+                                Care</a>
+                        </div>
+                        <div><a class="colors9A9A9A fontw400"
+                                [routerLink]="['/post-hospitalization-care/physio-and-rehab']">Physio &
+                                Rehab</a></div>
+                        <!-- <div><a class="colors9A9A9A fontw400" [routerLink]="['/frequently-asked-questions']">FAQ's</a> -->
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/app-features']">App Features</a>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-md-4">
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/careers']">Careers</a></div>
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/contact-us']">Contact Us</a></div>
+                        <div><a class="colors9A9A9A fontw400 cursorpointer" (click)="showfeed()">Feedback</a></div>
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/privacy-policy']">Privacy policy</a>
+                        </div>
+                        <div><a class="colors9A9A9A fontw400" [routerLink]="['/terms-and-conditions']">Terms &
+                                conditions</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 colorsfffwhite fontw600 martop gettouch">
+                <h1 class="font_h4">Get In Touch</h1>
+
+                <ul>
+                    <li> <a href="mailto:contactus@healthonus.io"
+                            class="colors9A9A9A fontw400">contactus&#64;healthonus.io</a></li>
+                    <li>
+
+                        <a href="tel:+914046143477" class="colors9A9A9A fontw400">
+
+                            +91 40-46143477,
+                        </a>
+                        <a href="tel:+91 89332 25111" class="colors9A9A9A fontw400">+91 89332 25111</a>
+                    </li>
+                    <li>
+                        <a class="textdecor colors9A9A9A fontw400" href="https://maps.app.goo.gl/tuYxmYk1tBpztASJ9">
+
+                            Plot No. 58,
+                            H.No.
+                            1-74/6,
+                            Guttala Begumpet,
+
+                            Madhapur, Hitech City Road, Metro Pillar #C 1725, Hyderabad - 500082
+
+
+
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="emptyheightdiv"></div>
+        <div class="whitelines"></div>
+        <div class="emptyheightdivthirty"></div>
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-8">
+                <div class="socail-iconss">
+                    <a href="https://www.facebook.com/HealthOnUsPvtLtd" target="_blank" class="me-3">
+                        <i class="fa-brands fa-facebook-f icon_clr"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/healthonustechnologies" target="_blank" class="me-3">
+                        <i class="fa-brands fa-instagram icon_clr"></i>
+                    </a>
+
+                    <a href="https://twitter.com/HealthOnUs" target="_blank" class="me-3">
+                        <i class="fa-brands fa-x-twitter icon_clr"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/healthonus" target="_blank" class="me-3">
+                        <i class="fa-brands fa-linkedin-in icon_clr"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 hoverdark">
+
+                <p class="text-white  copyright">
+                    © HealthOnUs Pvt Ltd. All rights reserved.
+                    <!-- Copyright &copy; {{currentYear}}, <a [routerLink]="['/home']">HealthOnUs</a> Pvt Ltd. All rights
+                        reserved. -->
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<app-scroll-top></app-scroll-top>

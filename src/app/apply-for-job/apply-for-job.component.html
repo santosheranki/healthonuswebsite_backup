@@ -1,0 +1,45 @@
+<div class="content frs-content">
+    <div class="container mt-5">
+        <div class="row top_job_list">
+            <div class="col-12 col-md-5 text-white p-5 bg967CFF">
+                <h1 class="mb-50">{{content?.Title}}</h1>
+                <button class="btn btn-light jobs_toggle_btn" (click)="navigatesubmitapplication()">
+                    Apply Now
+                </button>
+            </div>
+            <div class="col-12 col-md-7 ps-5">
+                <div>
+                    <p><strong>Job Title:</strong>{{content?.Title}}</p>
+                </div>
+                <div>
+                    <strong>Department:</strong>{{content?.Department}}
+                </div>
+                <div>
+                    <p><strong>Summary:</strong><br>
+                    <div [innerHTML]="content?.Summary"></div>
+                </div>
+                <div>
+                    <p><strong>Roles and Responsibilities:</strong></p>
+                    <div [innerHTML]="content?.Responsibilities"></div>
+                </div>
+                <div>
+                    <p><strong>Qualifications</strong></p>
+                    <div [innerHTML]="content?.Qualifications"></div>
+                </div>
+                <div>
+                    <p><strong>Benefits</strong></p>
+                    <div [innerHTML]="content?.Benefits">
+                    </div>
+                </div>
+                <div>
+                    <p><strong>About Our Company</strong></p>
+                    <div [innerHTML]="content?.AboutCompany">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-3 m-3">
+            &nbsp;
+        </div>
+    </div>
+</div>

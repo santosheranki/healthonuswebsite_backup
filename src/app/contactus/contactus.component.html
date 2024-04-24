@@ -1,0 +1,429 @@
+<div class="contact-us text-break">
+    <div class="socialmedia">
+        <h1 class="fontweight700 fitcontent text-center">Your Concerns, Our Priority</h1>
+        <h6 class="text-center">At HealthOnUs, we are committed to resolving any challenges,
+            issues, or inquiries you might have, ensuring your utmost satisfaction. We’re just a call, an email, or
+            a visit away. Let’s embark on this health journey together.</h6>
+
+        <div class="forms2">
+            <div class="text-center">
+                <p class="fweight">Download The HealthOnUs App</p>
+            </div>
+
+            <!-- <div>
+                <figure>
+                    <img [src]="environment?.websiteassetsURL + 'contactus/contactusgplayappleapp.png'" alt="contactusgplayappleapp_ione"
+                        class="img-fluid" title="contactusgplayappleapp_ione" (click)="playStore()">
+                </figure>
+            </div> -->
+            <div class="row social_icon">
+                <div class="col-md-6">
+                    <img src="../../assets/appstore.png" alt="appstore_itwo" class="cursorpointer" title="appstore_itwo"
+                        (click)="playStore()" />
+                </div>
+                <div class="col-md-6">
+                    <img src="../../assets/playstore.png" alt="playstore_ithree" class="cursorpointer"
+                        title="playstore_ithree" (click)="playStore()" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+
+
+        <div class="row mar-bottom">
+
+            <div class="col-sm-12 col-md-4">
+                <!-- <figure>
+                    <img src="../../assets/contactus/mobilecontactform (2).png" alt="mobilecontactform_ifour" title="mobilecontactform_ifour" class="img-fluid">
+                </figure> -->
+                <h3>Our Locations</h3>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-12 mb-3">
+                        <div class="addresses cursorpointer" (click)="openhyd()">
+                            <div class="d-flex align-items-center justify-contentflexstart">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-location-dot fa-xl"></i>
+                                </div>
+                                <h5>Hyderabad (Corporate Office)</h5>
+                            </div>
+
+                            <p>
+                                Plot No - 58, H.No 1-74/6, <br /> Guttala
+                                Begumpet, Madhapur, Hitech City Road, Metro Pillar #C 1725, Madhapur, <br /> Hyderabad -
+                                500082
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 mb-3">
+                        <div class="addresses cursorpointer" (click)="openvzg()">
+                            <div class="d-flex align-items-center justify-contentflexstart">
+                                <div class=" text-center">
+                                    <i class="fa-solid fa-location-dot fa-xl"></i>
+                                </div>
+                                <h5 class="text-center">Visakhapatnam</h5>
+                            </div>
+
+                            <p>
+                                Second Floor, Plot No. HIG-413, <br>
+                                Midhilapuri Colony, Madhurawada,<br>
+                                Visakhapatnam - 530041
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-12 mb-3" (click)="sendEmail()">
+                        <div class="addresses">
+                            <div class="d-flex align-items-center justify-contentflexstart">
+                                <div class=" text-center">
+                                    <i class="fa-regular fa-envelope fa-xl"></i>
+                                </div>
+                                <h5>Email</h5>
+                            </div>
+
+                            <a href="mailto:contactus@healthonus.io" class="email">
+                                {{' Contactus@healthonus.io'}}
+                            </a>
+                            <div class="d-flex align-items-center justify-contentflexstart">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-phone fa-xl"></i>
+                                </div>
+                                <h5>Call us on</h5>
+                            </div>
+
+                            <p>
+
+                                <a href="tel:+91 40-46143477" class="color000"> +91 40-46143477</a>
+
+                            </p>
+                            <p>
+                                <a href="tel: +91 89332 25111" class="color000"> +91 89332 25111</a>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-12 col-md-12 mb-3">
+                        <div class="addresses">
+                           
+                    </div>
+                </div> -->
+
+
+            </div>
+
+
+            <div class="col-sm-12 col-md-8 fieldsforms">
+                <div class="addresses mb-3">
+
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <!--firstname-->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div>
+                                    <label class="form-label labelclass">First Name<span
+                                            class="asterisk">*</span></label>
+                                    <span class="wpcf7-form-control-wrap" data-name="firstname">
+                                        <input size="40" class="form-control bgtry" id="firstname" aria-required="true"
+                                            maxlength="50" formControlName="firstname" placeholder="Enter First Name"
+                                            aria-invalid="false" value="" type="text" name="firstname" />
+                                    </span>
+                                </div>
+                                <div
+                                    *ngIf="contactForm.controls['firstname'].touched && contactForm.controls['firstname'].invalid">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['firstname'].hasError('required')">
+                                        First name is required
+                                    </div>
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['firstname'].hasError('pattern')">
+                                        Invalid First Name
+                                    </div>
+                                </div>
+                            </div>
+                            <!--last name-->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div>
+                                    <label class="form-label labelclass">Last Name<span
+                                            class="asterisk">*</span></label>
+                                    <span class="wpcf7-form-control-wrap" data-name="lastname">
+                                        <input size="40" maxlength="50" formControlName="lastname"
+                                            class="form-control bgtry" id="lastname" aria-required="true"
+                                            placeholder="Enter Last Name" aria-invalid="false" value="" type="text"
+                                            name="lastname" />
+                                    </span>
+                                </div>
+                                <div
+                                    *ngIf="contactForm.controls['lastname'].touched && contactForm.controls['lastname'].invalid">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['lastname'].hasError('required')">
+                                        Last name is required
+                                    </div>
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['lastname'].hasError('pattern')">
+                                        Invalid Last Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--email-->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div>
+                                    <label class="form-label labelclass">Email</label><span
+                                        class="asterisk">*</span><span class="form-control-wrap"
+                                        data-name="contactemail"><input size="40" maxlength="70"
+                                            class="form-control bgtry" id="contactemail" aria-required="true"
+                                            placeholder="Enter Your Email" formControlName="email" aria-invalid="false"
+                                            value="" type="email" name="contactemail" /></span>
+                                </div>
+                                <div
+                                    *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid">
+                                    <div class="text-danger" *ngIf="contactForm.controls['email'].hasError('required')">
+                                        Email is required</div>
+                                    <div class="text-danger" *ngIf="contactForm.controls['email'].hasError('pattern')">
+                                        Invalid Email
+                                    </div>
+                                </div>
+                            </div>
+                            <!--phone number-->
+                            <div class="col-sm-12 col-md-6 mb-3">
+                                <div>
+                                    <label class="form-label labelclass">Phone</label>
+                                    <span class="asterisk">*</span><span class="form-control-wrap "
+                                        data-name="phonenumber"><input size="40" maxlength="10"
+                                            (keypress)="phonePattern($event)" placeholder="Enter Phone Number"
+                                            formControlName="phonenumber" class=" form-control bgtry" id="phonenumber"
+                                            aria-required="true" aria-invalid="false" value="" type="tel"
+                                            name="phonenumber" /></span>
+                                </div>
+                                <div
+                                    *ngIf="contactForm.controls['phonenumber'].touched && contactForm.controls['phonenumber'].invalid">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['phonenumber'].hasError('required')">
+                                        Phone number is required</div>
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['phonenumber'].hasError('pattern')">
+                                        Mobile Number must be 10 digits
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--message-->
+                            <div class="col-sm-12 col-md-12 mb-3">
+                                <div>
+                                    <label class="form-label labelclass">Message<span class="asterisk">*</span></label>
+                                    <span class="form-control-wrap" data-name="message">
+                                        <textarea cols="100" rows="8" class="wp-block-search_input form-control bgtry"
+                                            id="message" formControlName="message" aria-required="true"
+                                            aria-invalid="false" placeholder="Write Your Message"
+                                            name="message"></textarea>
+                                    </span>
+                                </div>
+
+
+                                <div
+                                    *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].invalid">
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.controls['message'].hasError('required')">
+                                        Message is required</div>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <!--checkbox-->
+                            <div class="col-sm-12 col-md-12 mb-3">
+
+                                <div class="form-check">
+                                    <input class="form-check-input larger-checkbox" type="checkbox" id="termsCheckbox"
+                                        formControlName="termsCheckbox" />
+                                    <label class="form-check-label" for="termsCheckbox">
+                                        I agree with <a [routerLink]="['/terms-and-conditions']"> Terms of Use</a>
+                                        and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+                                    </label>
+
+                                </div>
+                                <!-- Button -->
+
+                            </div>
+                            <div class="col-sm-12 col-md-12 mb-3 text-center">
+
+                                <button type="submit" class="btn messagebutton"
+                                    [disabled]="contactForm.invalid || !contactForm.get('termsCheckbox')?.value">Send
+                                    Your Message</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--newsletters-->
+    <!-- <div class="container">
+        <div class="emptyheightdivhundred"></div>
+        <div class="backgrounddarklue" id="targetEmail">
+            <form [formGroup]="subscribeForm" (ngSubmit)="onsubscribeSubmit()">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 imagerowdiv">
+                        <figure>
+                            <div class="emptyheightdivforty"></div>
+                            <img src="../../assets/contactus/newsletterimage.png" alt="newsletterimage_ifive" title="newsletterimage_ifive" class="img-fluid imageheight">
+                        </figure>
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div class="emptyheightdivforty"></div>
+                        <div class="row text-center">
+                            <div class="text-white">Subscribe to our Newsletter</div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="prrela mb-3">
+                                <div class="emptyheightdivforty"></div>
+                                <input type="email"
+                                    class="wps-block-search___input form-control borderdaaaaaa inputstylecsss"
+                                    placeholder="Enter Your Email" formControlName="subscribeEmail"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <button class="btn btn-outline-secondary buttonstylecsss"
+                                    type="submit">Subscribe</button>
+                            </div>
+                            <div
+                                *ngIf="subscribeForm.controls['subscribeEmail'].touched && subscribeForm.controls['subscribeEmail'].invalid">
+                                <div class="text-danger"
+                                    *ngIf="subscribeForm.controls['subscribeEmail'].hasError('required')">
+                                    Please fill out this field.</div>
+                                <div class="text-danger"
+                                    *ngIf="subscribeForm.controls['subscribeEmail'].hasError('pattern')">
+                                    Please enter an email address.
+                                </div>
+                            </div>
+                            <div class="emptyheightdivforty"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="emptyheightdivhundred"></div>
+    </div> -->
+</div>
+<div class="bg6B">
+
+    <p class="fs-2 fontw600 text-white text-center">Frequently Asked Questions</p>
+
+    <div class="contactusfaq">
+        <div class="container">
+            <div class="accordion accordion-flush" id="faqlist1">
+                <div class="accordion-item bbnone br10">
+                    <div class="accordion-header font_h2">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-1">
+                            How can I contact with HealthOnUs?
+                        </button>
+                    </div>
+                    <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            You can connect us via mail on <a href="mailto:customersupport@healthonus.io">
+                                <u> customersupport&#64;healthonus.io</u> </a>anytime. We will revert you
+                            within 24 hours to help you with the best possible resolution to your query.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bbnone br10">
+                    <div class="accordion-header font_h2">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-2">
+                            Who should I contact if have any payment-related issues?
+                        </button>
+                    </div>
+                    <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            If you encounter any issues with your payment, please don’t hesitate to reach out to us. You
+                            can email us <a href="mailto:customersupport@healthonus.io">
+                                <u> customersupport&#64;healthonus.io</u> </a> Rest assures, we are committed to
+                            providing a
+                            satisfactory resolution to your concerns and ensuring that your money is secure at
+                            HealthOnUs.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bbnone br10">
+                    <div class="accordion-header font_h2">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-3">
+                            What is the process for a customer to lodge a complaint or provide feedback about the
+                            sessions or cancellation process?
+                        </button>
+                    </div>
+                    <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            Customers can lodge a complaint or provide feedback through the ‘Help & Support’ section in
+                            the app. The feedback will be reviewed, and necessary actions will be taken to improve the
+                            service.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bbnone br10">
+                    <div class="accordion-header font_h2">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-4">
+                            Is there a contact number to reach you?
+                        </button>
+                    </div>
+                    <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            Once logged in, you will see floating banners at the top of the app. Click on the ‘Looking
+                            for Help?’ banner. Our support staff will call you and quickly address your question.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item bbnone br10">
+                    <div class="accordion-header font_h2">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-5">
+                            Why I am unable to apply coupons while ordering medicines?
+                        </button>
+                    </div>
+                    <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            Coupons are not applicable for medicines. You can avail coupons while placing a service
+                            request for Nursing and Physiotherapy.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bbnone br10">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-6">
+                            Can I stop your services whenever I want?
+                        </button>
+                    </h2>
+                    <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                        <div class="accordion-body">
+                            Yes, you can stop using our services at any time by letting us know in advance. Please raise
+                            a ticket if you have any issues. We are here to help you!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" *ngIf="spinner">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

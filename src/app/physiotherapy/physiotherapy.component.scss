@@ -1,0 +1,271 @@
+.physiotherapymaindiv {
+  overflow: hidden;
+
+  @media (max-width: 968px) {
+    .proclaimimg {
+      position: relative !important;
+
+      img {
+        width: 80% !important;
+      }
+    }
+
+    .houcenterdiv {
+      .houcenter {
+        .row {
+          .houcenterimg {
+            position: relative !important;
+
+            img {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .physiointro {
+      .physioh2 {
+        top: 5% !important;
+      }
+    }
+
+    .proclaimimg {
+      // position: relative !important;
+      // bottom: 0px !important;
+      text-align: center !important;
+
+      img {
+        width: 80% !important;
+      }
+    }
+
+    .houcenterdiv {
+      .houcenter {
+        padding: 0px !important;
+
+        .row {
+          .houcenterimg {
+            // position: relative !important;
+            text-align: center !important;
+            margin-bottom: 30px !important;
+
+            img {
+              width: 80% !important;
+            }
+          }
+
+          .para {
+            padding: 1em !important;
+          }
+        }
+      }
+    }
+
+    .physiotherapyexpertise {
+      .row {
+        padding-bottom: 0px;
+      }
+
+      .Expertisediv {
+        margin-bottom: 20px !important;
+      }
+    }
+
+    .significance {
+      .significanceimg {
+        img {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .accordianclass {
+      padding: 0px !important;
+
+      .accordion-button {
+        padding: 10px 0px !important;
+      }
+    }
+  }
+
+  .physiotherapyexpertise {
+    .row {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 1em;
+    }
+
+    .Expertisediv {
+      text-align: center;
+
+      .Expertise {
+        height: 100%;
+        padding: 2em;
+      }
+
+      .colorone {
+        background: #f1f6ff;
+      }
+
+      .colortwo {
+        background: #f1eefc;
+      }
+
+      .alignstraight {
+        text-align: start !important;
+      }
+    }
+  }
+
+  .significance {
+    background: #fffbf8;
+    border: 1px solid rgba(0, 0, 0, 0.1019607843);
+
+    .row {
+      background: #fffbf8;
+    }
+
+    .significanceimg {
+      display: flex;
+      justify-content: center;
+      img {
+        padding: 2em 0em;
+        width: 50%;
+      }
+    }
+  }
+
+  .proclaimclass {
+    background: #eff5ff;
+    position: relative;
+    padding: 2em;
+
+    .row {
+      .discriptiondiv {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .proclaimimg {
+        position: absolute;
+        bottom: -100px;
+        right: 0;
+        text-align: end;
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .para {
+        padding: 2em 0;
+        color: #000;
+        border-radius: 0px 35px 35px 0px;
+      }
+    }
+  }
+
+  .houcenterdiv {
+    padding: 2em;
+    background: #f4f1ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .houcenter {
+      position: relative;
+      background: #967cff;
+      padding: 2em;
+      margin: 2em 0;
+      border-radius: 10px;
+
+      .row {
+        .discriptiondiv {
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .houcenterimg {
+          position: absolute;
+          bottom: -60px;
+          right: 0;
+          text-align: end;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        .para {
+          padding: 2em 2em 7em;
+          color: #ffffff;
+          border-radius: 0px 35px 35px 0px;
+        }
+      }
+    }
+  }
+
+  .accordianclass {
+    padding: 2em 3em;
+
+    .accordion-button {
+      background: #ffffff !important;
+    }
+  }
+
+  .physiointro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .physioh2 {
+      position: absolute;
+      top: 25%;
+      width: 100%;
+
+      h2 {
+        color: #fff;
+      }
+    }
+
+    .physiopara {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      bottom: 58px;
+
+      p {
+        // width: 1100px;
+        border-radius: 15px;
+        color: #000;
+        background: rgb(255, 255, 255);
+        padding: 3em;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-5 {
+    margin-left: 3rem;
+  }
+  .me-5 {
+    margin-right: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ms-5 {
+    margin-left: 0rem !important;
+  }
+  .me-5 {
+    margin-right: 0rem !important;
+  }
+}

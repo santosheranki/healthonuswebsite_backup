@@ -1,0 +1,150 @@
+.block-spacer-50 {
+    height: 50px;
+}
+
+.block-spacer-80 {
+    height: 80px;
+}
+
+.bg-brand {
+    background: #7465ad;
+}
+
+.spacer-30 {
+    height: 30px;
+}
+
+.p-48 {
+    padding: 48px !important;
+}
+
+.mb-28 {
+    margin-bottom: 28px;
+}
+
+p {
+    line-height: 2;
+}
+
+i.fa-solid {
+    font-size: 20px;
+}
+
+i.fa-brands::before {
+    height: 24px !important;
+    width: 24px !important;
+}
+
+.social-icons:hover {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+.social-icons {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.fb {
+    background-color: #0d66c2;
+}
+
+.insta {
+    background: #f00075 !important;
+}
+
+.twitter {
+    background: #1da1f2 !important;
+}
+
+.linkedin {
+    background: #0d66c2 !important;
+}
+
+.py-48 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.px-16 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.btn-brand {
+    background: #7465ad !important;
+    color: #fff;
+    padding: 12px 30px;
+    font-weight: 500;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+i.fa-envelope-open-text {
+    color: #7465ad;
+    font-size: 48px;
+}
+
+.px-48 {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.pt-16 {
+    padding-top: 16px;
+}
+
+.pb-28 {
+    padding-bottom: 28px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+#scrollToEmail {
+    transition: transform 0.5s ease-in-out;
+}
+
+#scrollToEmail:target {
+    transform: translateY(0);
+}
+
+.scroll-container {
+    width: 350px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+}
+
+.somecss {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}

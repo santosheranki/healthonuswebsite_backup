@@ -1,0 +1,192 @@
+.nursing {
+  @media (max-width: 992px) {
+    .cardsadjust {
+      margin-bottom: 30px !important;
+    }
+  }
+
+  .firstsection {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+    background-color: #eff4ff;
+
+    .topcap::before {
+      content: "";
+      border-top: 3px solid #000;
+      width: 25px;
+      position: absolute;
+      font-weight: 700;
+      margin-top: -5px;
+    }
+
+    .homenursingcare {
+      color: #7465ad !important;
+    }
+  }
+
+  .secondsection {
+    .flexbasis {
+      flex-basis: 50% !important;
+    }
+
+    .rounded_div {
+      border-radius: 20px !important;
+      padding: 40px !important;
+      font-size: 16px !important;
+    }
+
+    .wheelchairman {
+      width: 833 !important;
+      height: 682 !important;
+    }
+  }
+
+  .thirdsection {
+    .nursincareathome {
+      color: #7465ad !important;
+    }
+
+    .backgroud {
+      background-color: #f4f1ff !important;
+    }
+
+    .border {
+      border-radius: 40px !important;
+      padding: 40px !important;
+    }
+
+    .backgroundblue {
+      border-radius: 40px !important;
+      padding: 40px !important;
+      background-color: #eff5ff !important;
+    }
+  }
+
+  .fourthsection {
+    .topcap::before {
+      content: "";
+      border-top: 3px solid #000;
+      width: 25px;
+      position: absolute;
+      margin-top: -5px;
+    }
+
+    .ladywheel {
+      width: 621 !important;
+      height: 731 !important;
+    }
+  }
+
+  .careathome {
+    color: #7365ad !important;
+  }
+
+  @media screen and (min-width: 600px) {
+    .imagetext.position-absolute {
+      background-color: #7365ad;
+      color: #fff !important;
+      border-radius: 20px !important;
+      padding: 40px !important;
+      right: 146px !important;
+      top: 45px !important;
+      position: relative !important;
+      // position: absolute !important;
+    }
+  }
+
+  @media screen and (max-width: 601px) {
+    .imagetext.position-absolute {
+      background-color: #7365ad;
+      color: #fff !important;
+      border-radius: 20px !important;
+      padding: 40px !important;
+      top: 90px !important;
+      right: 0px !important;
+      position: relative !important;
+    }
+  }
+
+  .widthheight {
+    width: 660;
+    height: 412;
+  }
+
+  .sixthsection {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+    background-color: #eff4ff !important;
+  }
+
+  .col-bg {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .seventhsection {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+
+    .backgroundviolet {
+      background: #7465ad;
+    }
+
+    .py-57 {
+      padding-top: 57px;
+      padding-bottom: 57px;
+    }
+
+    .mb-28 {
+      margin-bottom: 28px !important;
+    }
+
+    .qrcode {
+      width: 144px;
+      height: 144px;
+    }
+
+    .mobiles img {
+      width: 569px;
+      height: 445px;
+    }
+
+    @media screen and (min-width: 600px) {
+      .mobiles .position-absolute {
+        bottom: 82px !important;
+        position: absolute !important;
+      }
+    }
+
+    @media screen and (max-width: 601px) {
+      .mobiles .position-absolute {
+        bottom: 0px !important;
+        position: relative !important;
+      }
+    }
+  }
+
+  .eightsection {
+    .backgroudgre {
+      background-color: #f1f1f1 !important;
+    }
+  }
+
+  .eigthsection {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+
+    .accordianclass {
+      background: #f1f1f1 !important;
+
+      .accordion-button {
+        background: #ffffff !important;
+      }
+    }
+  }
+}
+.mb-28 {
+  margin-bottom: 28px;
+}
+.py-57 {
+  padding-top: 57px;
+  padding-bottom: 57px;
+}

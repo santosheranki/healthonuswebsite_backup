@@ -1,0 +1,132 @@
+.home-testimonial {
+    // background-color: #231834;
+    // height: 380px;
+}
+
+.home-testimonial-bottom {
+    // background-color: #f8f8f8;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    // margin-top: 20px;
+    // margin-bottom: 0px;
+    // position: relative;
+    // height: 130px;
+    // top: 190px
+}
+
+.home-testimonial h3 {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+.home-testimonial h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.testimonial-inner {
+    // position: relative;
+    // top: -174px
+    // margin-top: 2em;
+}
+
+.testimonial-pos {
+    position: relative;
+    top: 24px
+}
+
+.testimonial-inner .tour-desc {
+    border-radius: 5px;
+    padding: 1em;
+    height: auto !important;
+    border: 2px solid #F0EDF2 !important;
+}
+
+.color-grey-3 {
+
+    font-size: 14px;
+    color: #383838;
+    // height: 13vh !important;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .testimonial-inner .tour-desc {
+        padding: 15px !important;
+        height: 237px !important;
+    }
+
+    .color-grey-3 {
+        height: 22vh !important;
+    }
+
+
+}
+
+.testimonial-inner img.tm-people {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: none
+}
+
+.link-name {
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin: 0.5em 0 0 0;
+}
+
+.link-position {
+    font-size: 14px;
+    color: #6b53b6;
+    font-weight: 600;
+}
+
+.home-testimonial {
+    // ... (your existing styles) ...
+
+    @media (max-width: 767px) {
+        height: auto; // Adjust height for mobile screens
+    }
+
+    .home-testimonial-bottom {
+        // ... (your existing styles) ...
+
+        @media (max-width: 767px) {
+            top: 0; // Adjust top positioning for mobile screens
+            height: auto; // Allow content to be naturally sized
+        }
+    }
+
+    .testimonial-inner {
+        @media (max-width: 767px) {
+            top: 0; // Adjust top positioning for mobile screens
+        }
+    }
+}
+
+.owl-carousel .owl-nav .owl-next {
+    user-select: none !important;
+    cursor: pointer !important;
+    background: #fff !important;
+    border-radius: 40px !important;
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.tour-item {
+    margin-right: 1em;
+}
+
+.tour-text {
+    height: 80px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}

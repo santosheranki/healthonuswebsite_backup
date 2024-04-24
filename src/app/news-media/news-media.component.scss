@@ -1,0 +1,362 @@
+.otherbg {
+    background: #F9F9F9 !important;
+}
+
+.bg775AD6 {
+    background: #775AD6 !important;
+}
+
+.nav-pills .nav-link {
+    border-bottom: 2px solid #775AD6 !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: #F9F9F9;
+    border-bottom-color: #F9F9F9;
+    border-bottom: 3px solid #775AD6 !important;
+    color: #000 !important;
+}
+
+.nav-pills .nav-link:not(.active) {
+    background-color: #F9F9F9;
+    color: #000 !important;
+    font-weight: 600 !important;
+    border-bottom: initial !important;
+}
+
+.fontw600 {
+    font-weight: 600 !important;
+}
+
+.fontw400 {
+    font-weight: 400 !important;
+}
+
+.cursorpointer {
+    cursor: pointer !important;
+}
+
+.onhoverpointer {
+    cursor: pointer !important;
+}
+
+.onhoverpointer :hover {
+    cursor: pointer !important;
+}
+
+.bg775AD6 {
+    background: #775AD6 !important;
+}
+
+.bordercolor {
+    border: 2px solid #9C9C9C !important;
+    color: #000 !important;
+}
+
+.whitelines {
+    border-bottom: 2px solid #918CA2 !important;
+}
+
+.viewfullstory {
+    margin: 1em 0;
+
+    p {
+        cursor: pointer !important;
+        color: #7D61D7;
+        font-weight: 400 !important;
+        font-size: 14px;
+    }
+}
+
+.righticon {
+    color: #775ad6 !important;
+    cursor: pointer !important;
+}
+
+.color000 {
+    color: #000 !important;
+}
+
+.itemcontent {
+    color: #050D40 !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    // text-align: center !important;
+}
+
+.itemdate {
+    color: #6D6D6D !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: end !important;
+    text-align: center !important;
+    margin: 0 1em;
+}
+
+.articleimgsizing {
+    max-width: 150px !important;
+    max-height: auto !important;
+}
+
+@media (max-width:576px) {
+    .articleimgsizing {
+        width: auto !important;
+    }
+
+    .itemdate {
+        margin: 0.5em 0 !important;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.imgresponsiveclass {
+    max-width: 100% !important;
+    height: 294px !important;
+}
+
+// .margin_class {
+//     margin: 0 3rem;
+// }
+
+@media (max-width : 576px) {
+    // .margin_class {
+    //     margin: 0 1rem !important;
+    // }
+
+    .newsmediau {
+        .mr-top {
+
+            padding-top: 1em !important;
+        }
+    }
+}
+
+.newsmediau {
+    .mr-top {
+
+        padding-top: 3em;
+    }
+
+    .itemcontent {
+        font-size: 1.2em;
+        padding: 0.5em 0;
+    }
+
+    .art_dec {
+        font-size: 14px;
+    }
+
+    .art_date {
+        font-size: 14px;
+    }
+}
+
+.oneitem {
+    border-bottom: 1px solid #e0e0e0;
+
+    img {
+        padding-top: 2em;
+    }
+}
+
+.video_news {
+    margin: 2em 0;
+
+    .video_title {
+        font-size: 1.5em;
+        color: #050D40;
+    }
+
+    .video_desc {
+        font-size: 1em;
+    }
+
+    .video_date {
+        font-size: 0.8em;
+        color: #a2a2a2;
+    }
+
+}
+
+.video_news>div {
+    margin: 2em 0;
+}
+
+.eventname {
+    margin-top: 1.5rem !important;
+    font-size: calc(1.375rem + 1.5vw);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.fs15 {
+    font-size: 15px !important;
+}
+
+// .gallery {
+//     max-width: 1500px;
+//     margin: 0 auto;
+//     font-family: arial;
+// }
+
+// /* Custom styles for gallery items */
+// .gallery-item {
+//     padding: 0.5em;
+//     margin-bottom: 16px;
+// }
+
+// /* Styles for the figure and figcaption if used */
+// .gallery-item figure {
+//     margin: 0;
+//     position: relative;
+// }
+
+// .gallery-item figcaption {
+//     font-style: italic;
+//     padding: 8px;
+//     position: absolute;
+//     background: rgba(0, 0, 0, 0.5);
+//     width: 100%;
+//     box-sizing: border-box;
+//     bottom: 3px;
+//     color: #fff;
+//     height: 30px;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     border-radius: 0 0 14px 14px;
+// }
+
+// /* Responsive image styles */
+// .gallery-item img {
+//     width: 100%;
+//     height: auto;
+//     display: block;
+//     border-radius: 14px;
+// }
+
+// /* Adjustments for different screen sizes */
+// @media screen and (max-width: 575px) {
+//     .gallery-item {
+//         flex: 0 0 100%;
+//         max-width: 100%;
+//     }
+// }
+
+// @media screen and (min-width: 576px) and (max-width: 767px) {
+//     .gallery-item {
+//         flex: 0 0 50%;
+//         max-width: 50%;
+//     }
+// }
+
+// @media screen and (min-width: 768px) {
+//     .gallery-item {
+//         flex: 0 0 33.333%;
+//         max-width: 33.333%;
+//     }
+// }
+
+// @media screen and (min-width: 992px) {
+//     .gallery-item {
+//         flex: 0 0 25%;
+//         max-width: 25%;
+//     }
+// }
+
+// @media screen and (min-width: 1200px) {
+//     .gallery-item {
+//         flex: 0 0 16.6667%;
+//         max-width: 16.6667%;
+//     }
+// }
+.gallery {
+    max-width: 1500px;
+    margin: 0 auto;
+    column-count: 4;
+    font-family: arial;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+
+.gallery-item figure {
+    margin: 0;
+    position: relative;
+}
+
+.gallery-item figcaption {
+    font-style: italic;
+    padding: 8px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 3px;
+    color: #fff;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0 0 14px 14px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.gallery-item p {
+    margin: 0;
+    padding: 8px;
+}
+
+@media screen and (max-width: 500px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 700px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 100.333333%;
+    }
+}
+
+.padding1ems {
+    padding: 1em 0px 2em 0px !important;
+}

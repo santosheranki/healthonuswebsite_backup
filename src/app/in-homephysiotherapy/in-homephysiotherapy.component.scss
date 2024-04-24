@@ -1,0 +1,172 @@
+.inhomephysiotherapydiv {
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    .homerow {
+      .homefirstcol {
+        margin: 30px 0 !important;
+      }
+    }
+
+    .physicalfitness {
+      margin-bottom: 30px !important;
+
+      .fitnessrow {
+        padding: 1em 0 !important;
+      }
+
+      .imgdisplay {
+        position: relative;
+
+        .image {
+          position: relative !important;
+          margin: 1em 0;
+        }
+      }
+    }
+
+    .downloadclass {
+      padding: 4em 1em 1em !important;
+    }
+
+    .servicesrow {
+      padding: 0 1em !important;
+    }
+
+    .physiotherapistsclass {
+      .firstone {
+        flex-direction: column !important;
+      }
+
+      .middleone {
+        flex-direction: column !important;
+      }
+    }
+
+    .faqsaccordian {
+      padding: 1em !important;
+    }
+  }
+
+  .homebased {
+    .homerow {
+      display: flex;
+      justify-content: space-around;
+
+      .homefirstcol {
+        background: #edeef6;
+        border-radius: 15px;
+        padding: 2em;
+      }
+
+      .buttonhovercss {
+        text-align: start !important;
+      }
+    }
+  }
+
+  .whatisuse {
+    .imgtwo {
+      margin: 1em 0;
+    }
+  }
+
+  .servicesinphysio {
+    .servicesrow {
+      display: flex;
+      justify-content: space-around;
+
+      .firstone {
+        margin-top: 1em;
+        padding: 2em;
+        background: #eff4ff;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .middleone {
+        background: #eeeeff;
+        border-radius: 10px;
+        margin-top: 1em;
+        padding: 2em;
+        text-align: center;
+      }
+    }
+  }
+
+  .physicalfitness {
+    margin-bottom: 100px;
+    background: #edeef6;
+    .fitnessrow {
+      background: #edeef6;
+      padding: 3em 2em;
+      display: flex;
+      justify-content: space-between;
+
+      .buttonhovercss {
+        text-align: start;
+      }
+    }
+
+    .imgdisplay {
+      position: relative;
+
+      .image {
+        position: absolute;
+      }
+    }
+  }
+
+  .physiotherapistsclass {
+    .servicesrow {
+      display: flex;
+      justify-content: space-around;
+
+      .firstone {
+        margin-top: 1em;
+        padding: 1em;
+        background: #eff4ff;
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+      }
+
+      .middleone {
+        margin-top: 1em;
+        background: #eff4ff;
+        display: flex;
+        padding: 1em;
+        border-radius: 10px;
+        align-items: center;
+      }
+    }
+  }
+
+  .appstore {
+    .physioclass {
+      display: flex !important;
+      justify-content: flex-start !important;
+    }
+  }
+
+  .faqsaccordian {
+    background: #edf2ff !important;
+    padding: 3em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ms-5 {
+    margin-left: 3rem;
+  }
+  .me-5 {
+    margin-right: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ms-5 {
+    margin-left: 0rem !important;
+  }
+  .me-5 {
+    margin-right: 0rem !important;
+  }
+}

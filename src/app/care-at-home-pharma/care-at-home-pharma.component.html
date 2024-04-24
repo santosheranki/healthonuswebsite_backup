@@ -1,0 +1,206 @@
+<div class="careat">
+  <div class="img">
+    <img [src]="environment?.websiteassetsURL + 'center_image_careathomepharma (2).png'" alt="center_image_ione" title="center_image_ione" />
+    <div class="bottom-left fs-2 color313131">
+      Medications and healthcare essentials right to your home
+    </div>
+    <h1 class="bottom-left2 color031B4E">Pharmacy Services</h1>
+  </div>
+  <div>
+    <div class="row justify-content-between">
+      <div class="col-sm-12 col-md-9 my-2 align-self-center container text-center">
+        <div class="emptyheightdivhundred">
+          <h2>Pharmacy Services</h2>
+        </div>
+        <p class="aboutp paddingleftright">
+          Our online pharmacy delivers your medications and healthcare
+          essentials right to your home. We prioritize safety, quality, and
+          convenience. Pharmacy home delivery services typically offer same-day
+          or next-day delivery of prescription and over-the-counter medications,
+          as well as medical supplies and equipment.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <div class="services_desc">
+        <h4>Pharmacy</h4>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <img [src]="environment?.websiteassetsURL + 'pharmacy/pharmacy.svg'" alt="pharmacy_itwo" title="pharmacy_itwo" />
+              </div>
+              <div class="col-md-8 align-self-center">
+                <div class="row pad-a">
+                  <div class="col-sm-12 col-md-6">
+                    <ul class="upper">
+                      <li>
+                        <span>24/7 Certified Pharmacists availability</span>
+                      </li>
+
+                      <li>
+                        <span>Cold Chain Supply for Home Delivery</span>
+                      </li>
+
+                      <li>
+                        <span> Nebulization </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <ul>
+                      <li>
+                        <span>24/7 Rapid Home Delivery</span>
+                      </li>
+                      <li>
+                        <span>Rehabilitation Product Counter</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--processflow and download-->
+<div class="darkbgsblue">
+  <div class="container">
+
+    <div class="stepper-wrapper">
+      <div class="stepper-item completed">
+        <div class="step-counter">1</div>
+        <div class="step-name">Download</div>
+        <div class="step-desc">Download from app store/play store</div>
+      </div>
+      <div class="stepper-item completed">
+        <div class="step-counter">2</div>
+        <div class="step-name">Register</div>
+        <div class="step-desc">Register with your mobile number or email ID</div>
+      </div>
+      <div class="stepper-item completed">
+        <div class="step-counter">3</div>
+        <div class="step-name">Select Service</div>
+        <div class="step-desc">Choose any of our services</div>
+      </div>
+      <div class="stepper-item completed">
+        <div class="step-counter">4</div>
+        <div class="step-name">Enjoy</div>
+        <div class="step-desc">Get care at your comfort of home</div>
+      </div>
+    </div>
+    <div class="downloadmbapp text-center">
+      <li>
+        <a class="wp-block-button__link wp-element-button has-text-align-start" (click)="popupopen()">Download Mobile
+          App</a>
+      </li>
+    </div>
+  </div>
+  <div *ngIf="display">
+    <app-modal-popup></app-modal-popup>
+  </div>
+</div>
+<!--processflow and download ends-->
+
+<!--faq's-->
+<div class="bg6B">
+
+  <p class="fs-2 fontw600 text-white text-center">Frequently Asked Questions</p>
+
+  <div class="contactusfaq">
+    <div class="container faq_pad">
+      <div class="accordion accordion-flush" id="faqlist1">
+        <div class="accordion-item bbnone br10">
+          <div class="accordion-header font_h2">
+            <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-content-1">
+              How can I order medicine online with HealthOnUs?
+            </button>
+          </div>
+          <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              At HealthOnUs, we offer a seamless, faster, and safer online
+              medicine delivery process. Simply go to the “buy medicine” section
+              of our app, select your desired item, add it to your cart, enter
+              your address, make your payment, and relax – your medicine will be
+              delivered to your doorstep in no time.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bbnone br10">
+          <div class="accordion-header font_h2">
+            <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-content-2">
+              Is your online medicine delivery safe?
+            </button>
+          </div>
+          <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              Absolutely. Our online medicine delivery service is safer than
+              ever, with no need for you to step out or wait in long queues. You
+              can also avoid the risk of infection and other hassles when you
+              are not feeling well.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bbnone br10">
+          <div class="accordion-header font_h2">
+            <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-content-3">
+              How will I know if there is a delay in medicine delivery?
+            </button>
+          </div>
+          <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              We always strive to deliver your medicine within the estimated
+              time. However, in case of any unexpected delays, we will inform
+              you promptly via email and messages. You can also track the status
+              of your order in our app under the “order status” section.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bbnone br10">
+          <div class="accordion-header font_h2">
+            <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-content-4">
+              Do I need to provide a prescription or physician authorization to
+              avail of your healthcare services?
+            </button>
+          </div>
+          <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              To provide medical assistance, we need prescriptions. However, we
+              don’t require a prescription for every service such as nursing.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bbnone br10">
+          <div class="accordion-header font_h2">
+            <button class="accordion-button collapsed accstyles" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq-content-5">
+              Do you provide express delivery?
+            </button>
+          </div>
+          <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              Yes, we offer express delivery for your medicine. However, it may
+              not be available for all orders, and it depends on factors such as
+              your location, the availability of medicines, and delivery
+              executives in your area. For more information, please check our
+              app.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--faq's ends-->

@@ -1,0 +1,176 @@
+<div class="container">
+    <div class="modal-dialog modal-dialog-centered modalbackdrop">
+        <div class="modal mainmodal" *ngIf="modalService.showfeedback === true" id="myModal"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div *ngIf="showform" class="modal-content">
+                <div class="row">
+                    <div class="col-12 closebtn position-absolute">
+                        <i (click)="closeModal()" class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="service_label">
+                            <label class="">We Appreciate Your Feedback</label>
+                            <p>We are always looking for ways to improve your experience. Please take a moment to
+                                evaluate and tell us what you think.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="feedback-form" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+                                <div *ngFor="let question of feedbackQuestions; let i = index"
+                                    class="feedback-question">
+                                    <div class="question-row">
+                                        <p class="question-number">{{ i + 1 }}.</p>
+                                        <p class="question-title">{{ question?.Title }}<span class="asterisk"
+                                            *ngIf="question?.isRequired === true">*</span></p>
+                                    </div>
+                                    <div *ngIf="question.Type === 'Checkbox'" class="checkbox-options">
+                                        <div *ngFor="let option of question.Options; let j = index" class="form-check">
+                                            <input type="checkbox" (change)="valuesetFn($event,question,option)"
+                                                class="form-check-input form-check-input-lg" [value]="option" />
+                                            <label class="form-check-label" [for]="'option-' + i + '-' + j">{{ option
+                                                }}</label>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="question.Type === 'Textarea'" class="textarea-input">
+                                        <textarea class="form-control" formControlName="{{question.Name}}"
+                                            placeholder="Enter your Feedback" maxlength="500" cols="10" rows="5"
+                                            (change)="onNotes($event,question)"></textarea>
+                                            <p class="ticketcomments text-end">{{feedbackForm.controls[question.Name].value?.length
+                                                ?? 0}}/500</p>
+                                            <div *ngIf="feedbackForm.controls[question.Name]?.touched && feedbackForm.controls[question.Name]?.invalid"
+                                                class="text-danger padding1em">
+                                                <div *ngIf="feedbackForm.controls[question.Name]?.hasError('required')">
+                                                    Feedback is required
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="question-row-emoji" *ngIf="question.Type === 'Emoji'">
+                                        <div class="row icon_row_padding">
+                                            <div class="col-auto icon_padding" *ngFor="let option of question.Options">
+                                                <label
+                                                    [ngClass]="option ===  selectedEmojis[question.Name] ? 'activeemoji' : 'defaultemoji'">
+                                                    <i class="icon_emoji px-4" [ngClass]="emoji[option]"
+                                                        (click)="selectEmoji(option,question)"></i>
+                                                        <div class="emoji-text">{{ emojiText[option] }}</div>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="row done_btn">
+                                <div class="col-12  btn_width">
+                                    <button *ngIf="!showspinner" type="submit" (click)="onSubmit()"
+                                        [disabled]="!feedbackForm.valid" class="btn submitbtn">Submit</button>
+                                </div>
+                            </div>
+                            <div class="row done_btn">
+                                <div class="col-12  btn_width">
+                                    <button [disabled]="contactForms.valid" *ngIf="showspinner" type="submit"
+                                        class="btn submitbtn">
+                                        <div class="btn_spinner">
+                                            <div class="spinner-border " role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div *ngIf="showsuccess" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'success_msg.png'" alt="success_msg_ione"
+                                title="success_msg_ione" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h2>Feedback Submitted Successfully</h2>
+                        </div>
+                    </div>
+                    <!-- <div class="row py-3">
+
+                        <div class="col-12 text_center">
+                            <h6 class="erro_class">Our support team will contact you shortly.</h6>
+                        </div>
+                    </div> -->
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn submitbtn" (click)="closeModal()">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="showerror" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'error_msg.png'" alt="error_msg_itwo"
+                                title="error_msg_itwo" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h2>Unable to Submit the Feedback</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn retry_btn" (click)="retryenquiry()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="existinguser" class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 text_center">
+                            <img [src]="environment?.websiteassetsURL + 'error_msg.png'" alt="error_msg_ithree"
+                                title="error_msg_ithree" />
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-12 text_center">
+                            <h2>Multiple Entries</h2>
+                        </div>
+                    </div>
+                    <div class="col-12 text_center">
+                        <h6 class="erro_class">We have an existing
+                            enquiry associated with this mobile number. Kindly wait, and our executive will be in
+                            touch with you shortly.</h6>
+                    </div>
+                    <div class="row py-4 done_btn">
+                        <div class="col-12 btn_width">
+                            <button type="button" class="btn retry_btn" (click)="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" *ngIf="spinner">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

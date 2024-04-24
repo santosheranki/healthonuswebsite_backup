@@ -1,0 +1,181 @@
+<div class="homepagemaindiv">
+  <app-homebanner></app-homebanner>
+  <div class="container">
+    <div class="row">
+      <h1 class="fs-1 text-center color000 fontw600 title">
+        Our Major Healthcare Services
+      </h1>
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100">
+            <img class="card-img-top imgesize img-fluid"
+              [src]="environment?.websiteassetsURL + 'homepage/home_again_1.png'" alt="home_again_ione" title="home_again_ione" />
+            <div class="card-body">
+              <h4 class="card-title">Nursing Care</h4>
+              <p class="card-text h-120 mediah180">
+                Experience swift, simple transitions with our empathetic care,
+                excellent facilities, state-of-the-art equipment, and advanced
+                techniques.
+              </p>
+              <div class="d-flex align-items-center text-white floatright readmorebtncards">
+                <a [routerLink]="['/homecare-services/nursing']" class=" ">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100">
+            <img class="card-img-top imgesize img-fluid"
+              [src]="environment?.websiteassetsURL + 'homepage/home_again_2.png'" alt="home_again_itwo" title="home_again_itwo" />
+            <div class="card-body">
+              <h4 class="card-title">Physiotherapy</h4>
+
+              <p class="card-text h-120 mediah180">
+                We provide a broad-gauged ways of interventions to treat
+                ailments.
+              </p>
+              <div class="d-flex align-items-center text-white floatright readmorebtncards">
+                <a [routerLink]="['/homecare-services/physiotherapy']" class=" ">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100">
+            <img class="card-img-top imgesize img-fluid"
+              [src]="environment?.websiteassetsURL + 'homepage/home_again_3.png'" alt="home_again_ithree" title="home_again_ithree" />
+            <div class="card-body">
+              <h4 class="card-title">Pharmacy</h4>
+              <p class="card-text h-120 mediah180">
+                Our pharmacy services focus on the accurate dispensing of
+                medicines with additional assistance such as prescription fills.
+              </p>
+              <div class="d-flex align-items-center text-white floatright readmorebtncards">
+                <a [routerLink]="['/homecare-services/pharmacy']" class=" ">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100">
+            <img class="card-img-top imgesize img-fluid"
+              [src]="environment?.websiteassetsURL + 'homepage/home_again_4_4.png'" alt="home_again_ifour" title="home_again_ifour" />
+            <div class="card-body">
+              <h4 class="card-title">Transition Care</h4>
+              <p class="card-text h-120 mediah180">
+                Our premier facility offers transitional care with modern
+                equipment and in-house staff.
+              </p>
+              <div class="d-flex align-items-center text-white floatright readmorebtncards mediam36">
+                <a [routerLink]="['/post-hospitalization-care/transition-care']" class=" ">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100">
+            <img class="card-img-top imgesize img-fluid"
+              [src]="environment?.websiteassetsURL + 'homepage/home_again_5_5.png'" alt="home_again_ifive" title="home_again_ifive" />
+            <div class="card-body">
+              <h4 class="card-title">Physiotherapy & Rehab</h4>
+              <p class="card-text h-120 mediah180">
+                Get comprehensive care through safe and
+                comfortable physiotherapy and rehabilitation. 
+              </p>
+              <div class="d-flex align-items-center text-white floatright readmorebtncards">
+                <a [routerLink]="['/post-hospitalization-care/physio-and-rehab']" class=" ">Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100 lookingforservices">
+            <div class="card-body text-center">
+              <div class="card-text mb-10">
+                <span class="text-white fs-2 text-center lookmore">Looking for more services?</span>
+              </div>
+              <a [routerLink]="['/contact-us']" class="color8A72EC text-center readmorebtncards-white">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4 mb-4">
+        <div class="cardshover h-100">
+          <div class="card imgesize shadow bg-white rounded boxshadowcolour h-100 lookingforservices align-middle">
+            <span class="text-white fs-2 text-center lookmore">Looking for more services?</span>
+            
+              <a [routerLink]="['/post-hospitalization-care/physio-and-rehab']" class="color8A72EC text-center readmorebtncards-white">Read
+                More</a>
+            
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- </div> -->
+  </div>
+
+  <app-common-download></app-common-download>
+  <div class="newhomeseconddiv">
+    <div class="anothercontainer">
+      <div class="container">
+        <h3 class="fontw600 text-white text-center">
+          What our customers say in their own words
+        </h3>
+        <app-testimonial></app-testimonial>
+      </div>
+    </div>
+  </div>
+  <div class="lightpink">
+    <div class="container"></div>
+  </div>
+  <!--new-->
+  <!-- <div class="lightpink scw_mar">
+    <div class="container">
+      <div class="dark241946 connect">
+        <div class="row text-center">
+          <div class="col">
+            <div class="row align-items-center">
+              <div class="col-sm-2 my-2">
+                <img [src]="environment?.websiteassetsURL + 'homepage/Phone-thin.svg'" alt="Phone_thin_ione" title="Phone_thin_ione" />
+              </div>
+              <div class="col-sm-7 my-2 border-right">
+                <p class="fs-2 text-white fontw600 lastcontact text-center">
+                  Stay Connected, We’re Here for You!
+                </p>
+                <p class="text-white fontw400 lastcontact">
+                  We’re just a call, an email, or a visit away.
+                </p>
+              </div>
+              <div class="col-sm-3 my-2">
+                <div class="yellowcontactbtn">
+                  <span class="lastcontact"><a class="wp-block-button__link wp-element-button has-text-align-start"
+                      href="#" [routerLink]="['/contact-us']">Contact Us</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+</div>

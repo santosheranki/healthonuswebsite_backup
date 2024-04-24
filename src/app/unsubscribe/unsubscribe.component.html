@@ -1,0 +1,62 @@
+<div class="contact-us text-break">
+    <div class="container">
+        <div class="title-content">
+            <div class="block-spacer-50"></div>
+            <h1 class="font_h2 title text-center m-0 headerfontcolor fw-700">Unsubscribe Email</h1>
+            <p class="text-center m-0">
+                This will Unsubscribe all the feed !
+            </p>
+            <div class="block-spacer-80"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="newsletter shadow px-48 pt-16 scrollcontainer scroll-page" id="targetEmail">
+            <form [formGroup]="unsubscribeForm" (ngSubmit)="onunsubscribeSubmit()">
+                <div class="row pb-28 align-items-center mb-28">
+                    <div class="col-sm-12 col-md-1 col-xl-1">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <p class="m-0 fs-20">Unsubscribe the newsletter and the posts</p>
+                    </div>
+                    <div class="col-sm-12 col-xl-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-12 col-lg-8 col-xl-8 pt-4">
+                                <p>
+                                    <span id="elId" #target class="form-control-wrap"
+                                        data-name="unsubscribeemail"><input size="40" class="form-control"
+                                            id="unsubscribeemail" aria-required="true" aria-invalid="false"
+                                            formControlName="unsubscribeEmail" placeholder="Enter Your Email"
+                                            type="email" [(ngModel)]="unemailQueryParam" name="unsubscribeemail">
+                                        <div
+                                            *ngIf="unsubscribeForm.controls['unsubscribeEmail'].touched && unsubscribeForm.controls['unsubscribeEmail'].invalid">
+                                            <div class="text-danger"
+                                                *ngIf="unsubscribeForm.controls['unsubscribeEmail'].hasError('required')">
+                                                To Unsubscribe Email is required</div>
+                                            <div class="text-danger"
+                                                *ngIf="unsubscribeForm.controls['unsubscribeEmail'].hasError('pattern')">
+                                                Invalid Email
+                                            </div>
+                                        </div>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-sm-12 col-lg-2 col-xl-2 pt-4">
+                                <input class="has-spinner btn btn-brand" id="subscribebtn" type="submit"
+                                    value="Unsubscribe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="emptyheightdivhundred"></div>
+    </div>
+</div>
+<div class="overlay" *ngIf="spinner">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

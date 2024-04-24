@@ -1,0 +1,55 @@
+.mainclass {
+    position: fixed;
+    z-index: 999999999999999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: transparent;
+}
+
+.firstdiv {
+    height: 50vh;
+}
+
+.seconddiv {
+    height: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.div1 {
+    width: 100px;
+    height: 100px;
+    animation: upper 1.5s ease-in-out forwards;
+}
+
+.div1 {
+    width: 100%;
+}
+
+.div2 {
+    width: 100px;
+    height: 100px;
+    animation: upper 1.5s ease-in-out backwards;
+}
+
+.div2 {
+    width: 100%;
+}
+
+@keyframes upper {
+    0% {
+        background: #7465ad;
+        left: 0px;
+        top: 0px;
+        height: 50vh;
+    }
+
+    100% {
+        background: #7465ad;
+        left: 0px;
+        top: 0px;
+        height: 0vh;
+    }
+}

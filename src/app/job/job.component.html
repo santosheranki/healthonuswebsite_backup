@@ -1,0 +1,294 @@
+<div class="container mr-top" id="jobapplicationform">
+
+    <div class="row text-center">
+        <p class="text-center fontsizing">{{this.jobTitle}}</p>
+
+        <p class="othersa"><i class="fa-solid fa-location-dot"></i> {{this.joblocation}}
+            <br /><i class="fa-regular fa-rectangle-list"></i> Full Time <i class="fa-regular fa-calendar-days"></i>
+            {{this.jobdate}}
+        </p>
+
+    </div>
+    <div class="row my-4 rowalignforinput justify-content-center">
+        <div class="col-lg-5 col-md-6 col-sm-12 new_client_inputheader">
+            <div class="segment-buttons">
+                <button (click)="selectSegment('Overview')"
+                    [class.active]="selectedSegment === 'Overview'">Overview</button>
+                <button (click)="selectSegment('Application')"
+                    [class.active]="selectedSegment === 'Application'">Application</button>
+            </div>
+        </div>
+        <!--overview-->
+
+        <div class="row rolesandres" *ngIf="selectedSegment === 'Overview'">
+            <div class="mb-3">
+                <strong>Job Title: </strong><span class="text-changing">{{content?.Title}}</span>
+            </div>
+            <div class="mb-3">
+                <strong>Department: </strong><span class="text-changing">{{content?.Department}}</span>
+            </div>
+            <div class="mb-3">
+                <strong>Summary: </strong>
+                <div class="text-changing" [innerHTML]="content?.Summary"></div>
+            </div>
+            <div class="mb-3">
+                <strong>Roles and Responsibilities:</strong>
+                <div class="text-changing" [innerHTML]="content?.Responsibilities"></div>
+            </div>
+            <div class="mb-3">
+                <strong>Qualifications</strong>
+                <div class="text-changing"
+                    [innerHTML]="content?.Qualifications === '<p></p>' ? 'NA' : content?.Qualifications"></div>
+            </div>
+            <div class="mb-3">
+                <strong>Benefits</strong>
+                <div class="text-changing" [innerHTML]="content?.Benefits">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <strong>About Our Company</strong>
+                <div class="text-changing" [innerHTML]="content?.AboutCompany">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-12 mb-3 text-center" *ngIf="selectedSegment === 'Overview'">
+            <button class="btn messagebutton" (click)="gotoApplication()">Apply For this job</button>
+        </div>
+        <!--application-->
+
+        <div *ngIf="selectedSegment === 'Application'" class="rolesandres">
+            <form [formGroup]="careersForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="firstname" class="labelsubmit">First Name<span class="asterisk">*</span></label>
+                            <input size="40" class="form-control bgtry form-control-lg" id="firstname"
+                                aria-required="true" maxlength="50" formControlName="firstname"
+                                placeholder="Enter First Name" aria-invalid="false" value="" type="text"
+                                name="firstname" />
+                            <div
+                                *ngIf="careersForm.controls['firstname'].touched && careersForm.controls['firstname'].invalid">
+                                <div class="text-danger" *ngIf="careersForm.controls['firstname'].hasError('required')">
+                                    First name is required
+                                </div>
+                                <div class="text-danger" *ngIf="careersForm.controls['firstname'].hasError('pattern')">
+                                    Invalid First Name
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="lastname" class="labelsubmit">Last Name<span class="asterisk">*</span></label>
+                            <input size="40" maxlength="50" formControlName="lastname"
+                                class="form-control bgtry form-control-lg" id="lastname" aria-required="true"
+                                placeholder="Enter Last Name" aria-invalid="false" value="" type="text"
+                                name="lastname" />
+                            <div
+                                *ngIf="careersForm.controls['lastname'].touched && careersForm.controls['lastname'].invalid">
+                                <div class="text-danger" *ngIf="careersForm.controls['lastname'].hasError('required')">
+                                    Last name is required
+                                </div>
+                                <div class="text-danger" *ngIf="careersForm.controls['lastname'].hasError('pattern')">
+                                    Invalid Last Name
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="email" class="labelsubmit">Email<span class="asterisk">*</span></label>
+                            <input size="40" maxlength="70" class="form-control bgtry form-control-lg"
+                                id="applicationemail" aria-required="true" placeholder="Enter Your Email"
+                                formControlName="email" aria-invalid="false" value="" type="email"
+                                name="applicationemail" />
+                            <div *ngIf="careersForm.controls['email'].touched && careersForm.controls['email'].invalid">
+                                <div class="text-danger" *ngIf="careersForm.controls['email'].hasError('required')">
+                                    Email is required</div>
+                                <div class="text-danger" *ngIf="careersForm.controls['email'].hasError('pattern')">
+                                    Invalid Email
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="phonenumber" class="labelsubmit">Phone<span class="asterisk">*</span></label>
+                            <input size="40" maxlength="10" (keypress)="phonePattern($event)"
+                                placeholder="Enter Phone Number" formControlName="phonenumber"
+                                class=" form-control bgtry form-control-lg" id="phonenumber" aria-required="true"
+                                aria-invalid="false" value="" type="tel" name="phonenumber" />
+                            <div
+                                *ngIf="careersForm.controls['phonenumber'].touched && careersForm.controls['phonenumber'].invalid">
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['phonenumber'].hasError('required')">
+                                    Phone number is required</div>
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['phonenumber'].hasError('pattern')">
+                                    Mobile Number must be 10 digits
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group mb-3">
+                            <label for="address" class="labelsubmit">Address (Optional)</label>
+                            <textarea size="40" formControlName="address" class=" form-control bgtry form-control-lg"
+                                id="address" aria-required="true" maxlength="200" aria-invalid="false" value=""
+                                type="textarea" name="address"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="totalexperience" class="labelsubmit">Total Experience<span
+                                    class="asterisk">*</span></label>
+                            <input size="40" maxlength="2" class="form-control bgtry form-control-lg"
+                                id="totalexperience" aria-required="true" placeholder="Enter In Years"
+                                formControlName="totalexperience" (keypress)="phonePattern($event)" aria-invalid="false"
+                                value="" type="tel" name="totalexperience" />
+                            <div
+                                *ngIf="careersForm.controls['totalexperience'].touched && careersForm.controls['totalexperience'].invalid">
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['totalexperience'].hasError('required')">
+                                    Total experience is required
+                                </div>
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['totalexperience'].hasError('pattern')">
+                                    Invalid Experience
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group mb-3">
+                            <label for="relatedexperience" class="labelsubmit">Related Experience<span
+                                    class="asterisk">*</span></label>
+                            <input size="40" maxlength="2" placeholder="Enter In Years"
+                                formControlName="relatedexperience" class=" form-control bgtry form-control-lg"
+                                id="relatedexperience" aria-required="true" aria-invalid="false" value="" type="tel"
+                                name="relatedexperience" />
+                            <div
+                                *ngIf="careersForm.controls['relatedexperience'].touched && careersForm.controls['relatedexperience'].invalid">
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['relatedexperience'].hasError('required')">
+                                    Related experience is required
+                                </div>
+                                <div class="text-danger"
+                                    *ngIf="careersForm.controls['relatedexperience'].hasError('pattern')">
+                                    Invalid Experience
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="relatedexperience" class="labelsubmit">Resume <span class="asterisk">*</span></label>
+                <div class="container">
+                    <div class="row socialmedia mb-3">
+                        <label class="drag-zone" (drop)="handleFileDrop($event)" (dragover)="handleDragOver($event)">
+                            <div class="row d-flex justify-content-center">
+                                <div *ngIf="!filenamehere"
+                                    class="circular-bg text-center mx-3 text-center justify-content-center">
+                                    <i class="fa-solid fa-arrow-up-from-bracket fa-xl iconcolour"></i>
+                                </div>
+                                <div class="emptyheightdivten"></div>
+                                <span *ngIf="!filenamehere">Upload a File or Drag and Drop here</span>
+                                <span *ngIf="!filenamehere" class="acceptspdfanddoc">(File must be either pdf or
+                                    doc and max size of 5MB)</span>
+                                <!-- <input type="file" [accept]="'.pdf,.doc,.docx'" [multiple]="multiple"
+                                    (change)="addFiles(fileInput?.files)" formControlName="uploadfile" #fileInput
+                                    class="visually-hidden form-control-lg" /> -->
+                                <!-- <input type="file" [accept]="'.pdf,.doc,.docx'" (change)="addFiles(fileInput?.files)"
+                                    formControlName="uploadfile" #fileInput class="visually-hidden form-control-lg" />
+                                <div *ngIf="fileErrorMessage" class="alert alert-danger">{{
+                                    fileErrorMessage }}</div> -->
+                                <input type="file" [accept]="'.pdf,.doc,.docx'" (change)="addFiles(fileInput?.files)"
+                                    formControlName="uploadfile" #fileInput class="visually-hidden form-control-lg" />
+                                <div *ngIf="fileErrorMessage" class="alert alert-danger">{{ fileErrorMessage }}</div>
+                                <div *ngIf="filenamehere" class="d-flex align-items-center justify-content-center">
+                                    <i [class]="getFileIconClass()" class="mx-2"></i>
+                                    <span class="file-name-placeholder">{{ filenamehere }}</span>
+                                    <button (click)="clearFile()" class="btn btn-link ml-2 classhover"
+                                        style="display: inline;">
+                                        <i class="fa-solid fa-times-circle fa-lg text-danger"></i></button>
+                                </div>
+                            </div>
+                            <ng-content></ng-content>
+                        </label>
+                    </div>
+                </div>
+                <div class="custom-modal-overlay" *ngIf="showsuccess">
+                    <div class="custom-modal">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <img [src]="environment?.websiteassetsURL + 'success_msg.png'"
+                                            alt="success_msg_ione" title="success_msg_ione" class="success-icon" />
+                                    </div>
+                                </div>
+                                <div class="row py-3">
+                                    <div class="col-12 text-center">
+                                        <h1>Application Submitted Successfully</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 btn-width">
+                                        <button type="button" class="btn submit-btn"
+                                            (click)="closeModal()">Done</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group mb-3">
+                            <label for="" class="labelsubmit">Cover Letter (Optional)</label>
+                            <textarea size="40" formControlName="coverletter"
+                                class=" form-control bgtry form-control-lg" maxlength="200" id="address"
+                                aria-required="true" aria-invalid="false" value="" type="textarea"
+                                name="address"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input larger-checkbox" type="checkbox" id="termsCheckbox"
+                        formControlName="termsCheckbox" />
+                    <label class="form-check-label" for="termsCheckbox">
+                        I agree with <a [routerLink]="['/terms-and-conditions']"> Terms of Use</a>
+                        and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>
+                    </label>
+
+                    <!-- </div> -->
+                </div>
+                <div class="row">
+                    <div class="form-group d-flex justify-content-center btn-mr">
+                        <button type="submit" class="btn messagebutton"
+                            [disabled]="careersForm.invalid || !careersForm.get('termsCheckbox')?.value || fileErrorMessage">Submit
+                            Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="overlay" *ngIf="spinner">
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

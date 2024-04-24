@@ -1,0 +1,91 @@
+<!-- <div class="container"> -->
+<div class="bgack" id="header">
+    <div class="content text-white text-center">
+        <small class="op-10 fs-11px">We are looking for future leaders. Are you up for it?</small>
+        <a [routerLink]="['/careers']" class="fs-10px text-decoration-underline ms-2">Apply Now</a>
+    </div>
+</div>
+<!-- </div> -->
+<nav class="navbar navbar-expand-lg navbar-light style-5 new-headerbg newagain" id="navbar">
+    <div class="container">
+        <a class="nav-link" href="#" [routerLink]="['/home']">
+            <img [src]="environment?.websiteassetsURL + 'healthouns_header_logo.png'" height="39" alt="healthouns_header_ione"
+                class="img-fluid headerlogoheightfix" title="healthouns_header_ione">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" data-bs-toggle="dropdown" [routerLink]="['/home']" (click)="closeNav()"> Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" data-bs-toggle="dropdown" [routerLink]="['/about-us']">
+                        About Us </a>
+                    <ul class="dropdown-menu">
+                        <!-- <li><a class="dropdown-item actives" [routerLink]="['/about-us']"><span class="sidehover">About
+                                    Us</span></a>
+                        </li> -->
+                        <!-- <li><a class="dropdown-item actives" [routerLink]="['/careers']"><span
+                                    class="sidehover">Careers</span></a></li> -->
+                        <!-- <li><a class="dropdown-item actives" [routerLink]="['/contact-us']"><span
+                                    class="sidehover">Contact Us</span></a></li> -->
+                        <li><a class="dropdown-item actives" [routerLink]="['/news-media']" (click)="closeNav()"><span
+                                    class="sidehover">News
+                                    & Media</span></a></li>
+                        <!-- <li><a class="dropdown-item actives" [routerLink]="['/contact-us']"
+                                (click)="init()">Referral</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" data-bs-toggle="dropdown" [routerLink]="['/homecare-services/nursing']"
+                        (click)="toggleNavbarDropdown('homecare')">Homecare
+                        Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item actives" [routerLink]="['/homecare-services/nursing']"
+                                (click)="closeNav()"><span class="sidehover">Nursing</span></a></li>
+                        <li><a class="dropdown-item actives" [routerLink]="['/homecare-services/physiotherapy']"
+                                (click)="closeNav()"><span class="sidehover">Physiotherapy</span></a></li>
+                        <li><a class="dropdown-item actives" [routerLink]="['/homecare-services/pharmacy']"
+                                (click)="closeNav()"><span class="sidehover">Pharmacy</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" data-bs-toggle="dropdown"
+                        [routerLink]="['/post-hospitalization-care/transition-care']">Post-Hospitalization Care</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item actives" [routerLink]="['/post-hospitalization-care/transition-care']"
+                                (click)="closeNav()"><span class="sidehover">Transition
+                                    Care</span>
+                            </a></li>
+                        <li><a class="dropdown-item actives" [routerLink]="['/post-hospitalization-care/physio-and-rehab']"
+                                (click)="closeNav()"><span class="sidehover">Physio &
+                                    Rehab</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <div class="defaultcolorasbutton">
+                    <li id="nav-item-53" class="nav-item nav-item-type-post_type nav-item-object-page nav-item-53"><a
+                            class="nav-link " [routerLink]="['/contact-us']" (click)="init()">Referral</a></li>
+                </div> -->
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" [routerLink]="['/app-features']" (click)="closeNav()"> App Features </a>
+                </li>
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" [routerLink]="['/careers']" (click)="closeNav()"> Careers </a>
+                </li>
+                <li class="nav-item dropdown someother">
+                    <a class="nav-link" [routerLink]="['/contact-us']" (click)="closeNav()">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown leftside">
+                    <a class="enquirybutton" (click)="showModalenquiry()">Enquiry</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

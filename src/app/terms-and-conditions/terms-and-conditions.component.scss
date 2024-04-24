@@ -1,0 +1,17 @@
+.typedisc {
+    list-style-type: disc !important;
+}
+
+.mt2rem {
+    margin-top: 2em !important;
+}
+
+@media screen and (min-width:260px) and (max-width: 1024px) {
+    .mt2rem {
+        margin: 1em 0 !important;
+    }
+}
+
+.listypenone {
+    list-style-type: none !important;
+}

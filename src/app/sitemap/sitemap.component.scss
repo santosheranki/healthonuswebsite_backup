@@ -1,0 +1,61 @@
+.sitemap {
+    @media (max-width: 992px) {
+
+        .cardsadjust {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    .firstsection {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+
+        .sitemaphealthcare {
+            color: #7465ad !important;
+        }
+    }
+
+    .secondsection {
+        .ladywheel {
+            width: 621 !important;
+            height: 731 !important;
+        }
+
+        .wecare {
+            color: #7465ad !important;
+        }
+
+        .imagesize {
+            width: 295px !important;
+            height: 404px !important;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .imagetext.position-absolute {
+            background-color: #7365ad;
+            color: #fff !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            right: 146px !important;
+            top: 45px !important;
+            position: absolute !important;
+        }
+    }
+
+    @media screen and (max-width: 601px) {
+        .imagetext.position-absolute {
+            background-color: #7365ad;
+            color: #fff !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            top: 90px !important;
+            right: 0px !important;
+            position: relative !important;
+        }
+    }
+
+    .font {
+        font-size: 20px !important;
+    }
+}

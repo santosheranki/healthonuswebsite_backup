@@ -1,0 +1,6 @@
+{
+  "production": false,
+  "contactUsURL": "https://healthonusapi.azurewebsites.net/api/",
+  "enquiryURL": "https://htadminserviceapi-qa.azurewebsites.net/api/",
+  "websiteassetsURL": "https://htfilecdn.azureedge.net/websiteassets/images/"
+}

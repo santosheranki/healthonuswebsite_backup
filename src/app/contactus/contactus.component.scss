@@ -1,0 +1,567 @@
+.block-spacer-50 {
+  height: 50px;
+}
+
+.block-spacer-80 {
+  height: 80px;
+}
+
+.bg-brand {
+  background: #7465ad;
+}
+
+.spacer-30 {
+  height: 30px;
+}
+
+.p-48 {
+  padding: 48px !important;
+}
+
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+// p {
+//   line-height: 2;
+// }
+
+i.fa-solid {
+  font-size: 20px;
+}
+
+i.fa-brands::before {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.social-icons:hover {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.social-icons {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.fb {
+  background-color: #0d66c2;
+}
+
+.insta {
+  background: #f00075 !important;
+}
+
+.twitter {
+  background: #1da1f2 !important;
+}
+
+.linkedin {
+  background: #0d66c2 !important;
+}
+
+.py-48 {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.btn-brand {
+  background: #7465ad !important;
+  color: #fff;
+  padding: 12px 30px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+i.fa-envelope-open-text {
+  color: #7465ad;
+  font-size: 48px;
+}
+
+.px-48 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.pt-16 {
+  padding-top: 16px;
+}
+
+.pb-28 {
+  padding-bottom: 28px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+#scrollToEmail {
+  transition: transform 0.5s ease-in-out;
+}
+
+#scrollToEmail:target {
+  transform: translateY(0);
+}
+
+.scroll-container {
+  width: 350px;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.scroll-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.fa-location-pin:before {
+  padding: 0px 3px !important;
+}
+
+.mar-bottom {
+  margin: 0em 0 4em 0;
+}
+
+//harsha thota changes
+.socialmedia {
+  padding: 5em;
+  background: #f2f1ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+.addresses {
+  padding: 1em;
+  /* border: 3px solid #E7E7E7 !important; */
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px #eaeaea;
+
+  h5 {
+    font-weight: 600 !important;
+  }
+}
+
+// .addresses:hover{
+//   background-color: #6B53B6 !important;
+//   border: 1px solid #6B53B6 !important;
+//   color: #fff !important;
+//   transition: transform 0.3s ease-in-out !important;
+//   transform: scale(1.05) !important;
+// }
+// .addresses:hover p {
+//   color: #fff !important;
+// }
+.forms {
+  padding: 1em;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px #eaeaea;
+}
+
+.forms2 {
+  // padding: 2.5em;
+  // border: 3px solid #F1F1F1 !important;
+  // border-radius: 20px;
+}
+
+.fieldsforms {
+  // padding: 1em;
+  // border: 3px solid #F1F1F1 !important;
+  // border-radius: 20px !important;
+  // margin-top: 9px !important; /* Default margin for widths above 760px */
+
+}
+
+@media (max-width: 760px) {
+  .fieldsforms {
+    margin-top: 9px !important;
+    /* Reset margin for widths 760px and below */
+  }
+}
+
+.fweight {
+  font-weight: 600 !important;
+  font-size: 17px !important;
+  padding-bottom: 0.5em;
+}
+
+.bgF2EEFF {
+  background: #F2EEFF !important;
+  border-radius: 20px !important;
+}
+
+.messagebutton {
+  background: #967CFF !important;
+  color: #fff !important;
+  border-radius: 30px !important;
+}
+
+.larger-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999696 !important;
+
+}
+
+.labelclass {
+  color: #3E3E3E !important;
+  font-weight: 600 !important;
+}
+
+.bgtry {
+  background: #F6F6F6 !important;
+}
+
+.bgtry:focus {
+  background: white !important;
+}
+
+.iconcolour {
+  color: #fff !important;
+}
+
+.circular-bg {
+  background-color: #967CFF !important;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 auto;
+  /* padding: 10px;*/
+}
+
+.circular-bg:hover {
+  background-color: #6B53B6 !important;
+  transform: scale(1.05) !important;
+}
+
+@media (min-width: 992px) {
+  .socialmedia {
+    h6 {
+      width: 70% !important;
+    }
+  }
+}
+
+@media (min-width: 280px) {
+  .addresses {
+    .email {
+      width: 214px !important;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .addresses {
+    padding: 1em;
+  }
+}
+
+
+//santosh
+.errorMessage {
+  border: 1px solid #ffb900;
+  border-radius: 0px;
+}
+
+.backgrounddarklue {
+  background: #142346 !important;
+}
+
+.borderdaaaaaa {
+  border-radius: 28px !important;
+}
+
+.inputstylecsss {
+  border-radius: 28px !important;
+  padding-right: 50px !important;
+  height: 47px !important;
+  width: 100% !important;
+}
+
+.prrela {
+  position: relative !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+  margin: 0 auto !important;
+
+  input::placeholder {
+    padding: 10px !important;
+  }
+}
+
+@media (min-width: 760px) {
+  .prrela {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .prrela {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .prrela {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 759px) {
+  .prrela {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .prrela {
+    width: 73% !important;
+  }
+}
+
+@media (max-width: 280px) {
+  .prrela {
+    width: 84% !important;
+  }
+}
+
+.buttonstylecsss {
+  position: absolute !important;
+  top: 42px !important;
+  right: 19px !important;
+  bottom: 2px !important;
+  border-radius: 28px 28px 28px 28px !important;
+  background-color: #967CFF !important;
+  color: #fff !important;
+}
+
+.imagerowdiv {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.imageheight {
+  height: 111px !important;
+}
+
+.form-check-label a:hover {
+  color: #967CFF !important;
+}
+
+.wp-block-search_input {
+  padding-top: 27px !important;
+
+  &:not(:placeholder-shown) {
+    padding-top: 10px;
+  }
+}
+
+.circular-bgs {
+  background-color: #967CFF !important;
+  width: 47px !important;
+  height: 47px !important;
+  border-radius: 50% !important;
+  // margin: 0 auto !important;
+  padding: 7px !important;
+}
+
+.bg6B {
+  background: #6B53B6 !important;
+  padding: 2em;
+
+  p {
+    padding-bottom: 1em;
+  }
+}
+
+.fontw600 {
+  font-weight: 600 !important;
+}
+
+.fontw400 {
+  font-weight: 400 !important;
+}
+
+.bbnone {
+  border-bottom: none !important;
+}
+
+.br10 {
+  border-radius: 10px !important;
+  margin-bottom: 0.5em;
+}
+
+.accstyles {
+  border-radius: 38px !important;
+}
+
+.plotaddress {
+  margin-right: 1rem !important;
+  margin-left: 1rem !important;
+}
+
+.justify-contentflexstart {
+  justify-content: flex-start !important;
+}
+
+.margin_btm {
+  margin-bottom: 3em;
+}
+
+.socialmedia {
+  margin-top: 5em;
+}
+
+@media (max-width: 576px) {
+  .socialmedia {
+    padding: 1em !important;
+  }
+
+  .margin_btm {
+    margin-bottom: 1.5em !important;
+  }
+
+  .socialmedia {
+    margin-top: 0em !important;
+  }
+
+  .fieldsforms {
+    border: none !important;
+  }
+}
+
+.fa-xl {
+  font-size: 1rem;
+}
+
+.fa-envelope.fa-xl {
+  font-size: 1.3rem;
+}
+
+.accordion-header {
+  margin-bottom: 0.3em;
+}
+
+.bg6B {
+  p {
+    padding-bottom: 0.5em;
+  }
+}
+
+.addresses {
+  h5 {
+    padding-left: 0.5em;
+  }
+
+  p {
+    padding-top: 0.5em;
+  }
+}
+
+.addresses {
+  a {
+    color: #6b53b6;
+  }
+}
+
+.form-check {
+  label {
+    font-size: 16px;
+  }
+
+  a {
+    color: #6b53b6;
+  }
+}
+
+@media screen and (min-width:260px) and (max-width: 1024px) {
+  .form-check {
+    label {
+      font-size: 12px;
+    }
+
+    a {
+      color: #6b53b6;
+    }
+  }
+}
+
+h6 {
+  font-size: 1.1em;
+  padding: 0.5em 0;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  color: #050D40;
+}
+
+span {
+  color: #4a4a4a;
+}
+
+.forms2 {
+  margin: 1em 0 0;
+}
+
+h3 {
+  text-align: center;
+  padding: 0em 0 0.5em 0;
+}
+
+.social_icon {
+  text-align: center;
+
+  img {
+    width: 150px;
+    padding: 0.5em 0;
+  }
+}
+
+.color000 {
+  color: #4a4a4a !important;
+}

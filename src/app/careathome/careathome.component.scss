@@ -1,0 +1,255 @@
+.careathomepage {
+  .descriptionimg {
+    @media (max-width: 992px) {
+      margin-bottom: 2em;
+    }
+  }
+
+  .description {
+    background: #eff5ff;
+    display: flex;
+    line-height: 1.5;
+    padding: 2em;
+    color: #000;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px 35px 35px 0px;
+  }
+}
+
+// .positionimg {
+//   margin-bottom: 18px !important;
+// }
+// .addressdiv img {
+//   width: 100%;
+//   height: 100%;
+// }
+.row-images {
+  overflow: hidden;
+}
+
+.pt-57 {
+  padding-top: 57px !important;
+}
+
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.px-38 {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.mb-n5 {
+  margin-bottom: -3rem;
+}
+
+.mt-n5 {
+  margin-top: -3rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 2400px) {
+  img.img-fluid.img-4 {
+    position: relative;
+    top: 68px;
+  }
+
+  img.img-fluid.img-1 {
+    position: relative;
+    top: 68px;
+  }
+}
+
+//new changes starts here
+.imgesizeborder {
+  .active {
+    border-bottom: none !important;
+    border-bottom-color: #fff !important;
+  }
+}
+
+.circular-bg {
+  background-color: #fff !important;
+  width: 66px;
+  height: 65px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.circular-bg2 {
+  background-color: #967CFF !important;
+  width: 66px;
+  height: 65px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.colors050D40 {
+  color: #050D40 !important;
+}
+
+.colors0F0F25 {
+  color: #0F0F25 !important;
+}
+
+.fontw600 {
+  font-weight: 600 !important;
+}
+
+.fontw400 {
+  font-weight: 400 !important;
+}
+
+.colors967CFF {
+  color: #967CFF !important;
+}
+
+.colors313131 {
+  color: #313131 !important;
+}
+
+.bg967CFF {
+  background: #967CFF !important;
+}
+
+.br10px {
+  border-radius: 10px !important;
+}
+
+.width22 {
+  width: 22% !important;
+}
+
+.bgEDE8FF {
+  background: #EDE8FF !important;
+}
+
+.colorsblack {
+  color: #000 !important;
+}
+
+.bg142346 {
+  background: #142346 !important;
+}
+
+.booknowbtn {
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    background: #142346 !important;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid #142346;
+    padding: 13px 30px;
+    line-height: 1;
+  }
+}
+
+.booknowbtn li a:hover {
+  color: #142346;
+  background: #fff !important;
+  border: 1px solid #142346;
+}
+
+.newbooknowbtn {
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    background: #967CFF !important;
+    border-radius: 10px;
+    color: #fff;
+    border: 1px solid #142346;
+    padding: 13px 30px;
+    line-height: 1;
+  }
+}
+
+.newbooknowbtn li a:hover {
+  color: #142346;
+  background: #fff !important;
+  border: 1px solid #142346;
+}
+
+.E9E9E9Line {
+  border-bottom: 1px solid #E9E9E9 !important;
+}
+
+.contactustext {
+  color: #170074 !important;
+}
+
+.circular-bgcontact {
+  background-color: #fff !important;
+  width: 50px;
+  color: #170074 !important;
+  height: 50px;
+  border: 1px solid #170074 !important;
+  border-radius: 50%;
+  margin: -8px 22px 15px 24px;
+  padding: 10px;
+  text-align: center !important;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.btns .circular-bgcontact img {
+  cursor: pointer;
+  animation: bounce 1s infinite;
+}
+
+.btns .circular-bgcontact img:hover {
+  animation-play-state: paused;
+}
+
+.lnheight {
+  line-height: 1.1 !important;
+}
+
+.fonts20 {
+  font-size: 20px !important;
+}
+
+ul.ticklist li::before {
+  content: "\F26A";
+  font-size: 1.5em;
+  margin-top: 0px !important;
+  color: #7A65CF !important;
+  padding-right: 15px !important;
+}
+
+.physio ul.ticklist li::before {
+  content: "\F26A" !important;
+  font-size: 1.5em !important;
+  margin-top: 0px !important;
+  color: #fff !important;
+  padding-right: 15px !important;
+}
+
+.padding1em {
+  padding: 1em !important;
+}

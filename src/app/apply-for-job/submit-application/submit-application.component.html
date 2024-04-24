@@ -1,0 +1,104 @@
+<div class="content frs-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-5 mt-3 mb-3">
+                <div class="careers_list ">
+                    <div class="mb-4 mt-5 font_h3">SUBMIT YOUR APPLICATION</div>
+                    <form [formGroup]="formsubmit" (ngSubmit)="onSubmit()">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" placeholder="Enter Your Name"
+                                aria-describedby="helpId" formControlName="name" (keypress)="NamePattern($event)" />
+                            <div *ngIf="formsubmit.controls['name'].invalid &&
+                    formsubmit.controls['name'].touched
+                    && formsubmit.controls['name'].errors?.['required']" class="text-danger">
+                                Name is required
+                            </div>
+                            <div *ngIf="
+                  formsubmit.controls['name'].touched &&
+                  formsubmit.controls['name'].hasError('minlength') &&
+                  formsubmit.controls['name'].value.length < 3
+                " class="text-danger">
+                                Minimum 3 character are required
+                            </div>
+                            <div *ngIf="formsubmit.controls['name'].touched
+                    && formsubmit.controls['name'].errors?.['pattern']" class="text-danger">
+                                Invalid Name
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="form-control" placeholder="Enter Your Email"
+                                aria-describedby="helpId" formControlName="email" />
+                            <div *ngIf="
+              formsubmit.controls['email'].touched &&
+              formsubmit.controls['email'].invalid
+            ">
+                                <div class="text-danger" *ngIf="formsubmit.controls['email'].hasError('required')">
+                                    Email is required
+                                </div>
+                                <div class="text-danger" *ngIf="formsubmit.controls['email'].hasError('pattern')">
+                                    Invalid Email
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" class="form-control" placeholder="Enter Yout Mobile Number"
+                                aria-describedby="helpId" formControlName="phonenumber" maxlength="10"
+                                (keypress)="phonePattern($event)" />
+                            <div *ngIf="
+                      formsubmit.controls['phonenumber'].touched &&
+                      formsubmit.controls['phonenumber'].invalid
+                    ">
+                                <div class="text-danger" *ngIf="
+                        formsubmit.controls['phonenumber'].hasError('required')
+                      ">
+                                    Phone Number is required
+                                </div>
+                                <div class="text-danger" *ngIf="
+                        formsubmit.controls['phonenumber'].hasError('pattern')
+                      ">
+                                    Phone Number must be 10 digits
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input formControlName="uploadfile" class="form-control" accept=".docx,.doc,.pdf"
+                                aria-required="true" aria-invalid="false" type="file" id="file" name="UploadCV"
+                                style="display: none" (change)="selectFile($event)" />
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-outline-secondary" type="button" (click)="handleUpload()">
+                                <i class="bi bi-upload mx-2"></i> Upload File
+                            </button>
+                            <span class="mx-2" class="ellipsis">{{ file?.name }}</span>
+                            <div *ngIf="
+                      formsubmit.controls['uploadfile'].touched &&
+                      formsubmit.controls['uploadfile'].invalid
+                    ">
+                                <div class="text-danger" *ngIf="
+                        formsubmit.controls['uploadfile'].hasError('required')
+                      ">
+                                    File is required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control" name="" id="" rows="8" placeholder="Enter Your Message..."
+                                formControlName="description"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-brand" [disabled]="!formsubmit.valid">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-7"></div>
+        </div>
+    </div>
+    <div class="p-5 m-5">
+        &nbsp;
+    </div>
+    <div class="overlay" *ngIf="spinner">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>

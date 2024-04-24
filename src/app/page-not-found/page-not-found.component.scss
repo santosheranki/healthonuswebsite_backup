@@ -1,0 +1,85 @@
+// .py-100 {
+//   padding-top: 100px;
+//   padding-bottom: 100px;
+// }
+
+// .btn-brand {
+//   background-color: #142346 !important;
+//   color: #fff;
+//   border-radius: 10px !important;
+//   padding: 10px 42px;
+//   font-size: 1.125em;
+// }
+
+// .btn.btn-brand:hover {
+//   background-color: #fff !important;
+//   border: 1px solid #142346 !important;
+//   color: #142346 !important;
+// }
+
+// .pagegotlost {
+//   font-weight: 300 !important;
+//   color: #313131;
+// }
+
+// .someonestole {
+//   color: #313131 !important;
+//   font-weight: 400 !important;
+// }
+
+
+
+/*======================
+    404 page
+=======================*/
+
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+
+  background-image: url(../../assets/img_404.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
+}
+
+.error_gif {
+  display: flex;
+  justify-content: center;
+  margin-top: 6vh;
+}
+
+@media (max-width:576px) {
+  .error_gif {
+    margin-top: 2vh !important;
+  }
+}

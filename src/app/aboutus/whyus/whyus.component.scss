@@ -1,0 +1,174 @@
+.whyus {
+    @media (max-width: 992px) {
+
+        .cardsadjust {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    .firstsection {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+
+        .whyushealthcare {
+            color: #7465ad !important;
+        }
+    }
+
+    .secondsection {
+        .topcap::before {
+            content: '';
+            border-top: 3px solid #000;
+            width: 25px;
+            position: absolute;
+            margin-top: -5px;
+        }
+
+        .ladywheel {
+            width: 621 !important;
+            height: 731 !important;
+        }
+
+        ul.ticklist {
+            li::marker {
+                content: "\f058";
+                padding-right: 20px;
+                line-height: 35px;
+                font-family: "Font Awesome 6 Free";
+                color: #7465ad;
+                margin-top: -5px;
+                font-weight: 900;
+            }
+
+            li::before {
+                padding-right: 20px;
+                content: '\f058';
+                font-family: "Font Awesome 6 Free";
+                line-height: 2.15;
+            }
+        }
+
+        .wecare {
+            color: #7465ad !important;
+        }
+
+        .imagesize {
+            width: 295px !important;
+            height: 404px !important;
+        }
+    }
+
+    .thirdsection {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+        background-color: #f1f5f9 !important;
+
+        .imagesize {
+            width: 364px !important;
+            height: 395px !important;
+        }
+
+        .shorten {
+            color: #7465ad !important;
+        }
+    }
+
+    .fourthsection {
+        .imagesize {
+            width: 286px !important;
+            height: 307px !important;
+        }
+
+        .costeffective {
+            color: #7365ad !important;
+        }
+
+    }
+
+    .fifthsection {
+        .continoustext {
+            color: #7465ad !important;
+            font-size: 16px !important;
+        }
+
+        .description {
+            background: #EFF5FF !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 0px 35px 35px 0px;
+        }
+
+        .microscope-img {
+            width: 150px !important;
+            height: 150px !important;
+        }
+
+        .descriptionimg {
+            padding-left: 46px !important;
+        }
+    }
+
+    .seventhsection {
+        .imagesize {
+            width: 381px !important;
+            height: 382px !important;
+        }
+    }
+
+    .eightsection {
+        .ourcenter {
+            color: #7465ad !important;
+        }
+
+        .left-col {
+            border-radius: 40px !important;
+            // padding: 40px !important;
+            background-color: #f1f5f9 !important;
+            height: 100%;
+        }
+
+        .right-col {
+            border-radius: 40px !important;
+            // padding: 40px !important;
+            background-color: #f5f2ff !important;
+            height: 100%;
+        }
+
+        .mb-28 {
+            margin-bottom: 28px;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .imagetext.position-absolute {
+            background-color: #7365ad;
+            color: #fff !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            right: 146px !important;
+            top: 45px !important;
+            position: absolute !important;
+        }
+    }
+
+    @media screen and (max-width: 601px) {
+        .imagetext.position-absolute {
+            background-color: #7365ad;
+            color: #fff !important;
+            border-radius: 20px !important;
+            padding: 40px !important;
+            top: 90px !important;
+            right: 0px !important;
+            position: relative !important;
+        }
+    }
+
+    .font {
+        font-size: 20px !important;
+    }
+}
+
+.cardscss {
+    color: #000 !important;
+}

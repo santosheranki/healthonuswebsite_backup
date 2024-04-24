@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="modal-dialog modal-dialog-centered modalbackdrop">
+    <div class="modal mainmodal" *ngIf="showModal" id="myModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-content">
+        <div class="closebtn">
+          <i (click)="closeModal()" class="fa-regular fa-circle-xmark"></i>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-12 modalfirstcol">
+              <h1 class="text-white mb-3 font_h3">Get Better Healthcare Service for you and your loved ones</h1>
+              <h6 class="mb-3 text-white">Leading Healthcare Service provider in your Hands</h6>
+              <div class="qrclass houdownloadqr text-center">
+                <img class="img-fluid" [src]="environment?.websiteassetsURL + 'downloadqr.png'" alt="downloadqr_one" title="downloadqr_one" />
+              </div>
+              <h5 class="text-center mb-3 d-none d-sm-block text-white">Scan this QR code to download App</h5>
+              <div class="text-center mb-3">
+                <a href="https://link.healthonus.io/gMfKGj">
+                  <img class="img-fluid " [src]="environment?.websiteassetsURL + 'careatcentre/googleplay.png'"
+                   alt="careatcentre_two" title="careatcentre_two"></a>
+
+                <a href="https://link.healthonus.io/gMfKGj">
+                  <img class="img-fluid " [src]="environment?.websiteassetsURL + 'careatcentre/appleappstore.png'"
+                    title="appleappstore_ithree" alt="appleappstore_ithree"></a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 popupqrimg text-center">
+              <img [src]="environment?.websiteassetsURL + 'homepage/houhomepage.png'" alt="houhomepage_ifour" class="img-fluid " title="houhomepage_ifour">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

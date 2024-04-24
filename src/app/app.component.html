@@ -1,0 +1,19 @@
+<div *ngIf="showloader">
+    <!-- <app-loader-component></app-loader-component> -->
+</div>
+<div>
+    <!-- <app-snow-fall></app-snow-fall> -->
+    <!-- <ng-container *ngIf="showHomeModal">
+        <app-modal-popup></app-modal-popup>
+    </ng-container> -->
+    <!-- <marquee behavior="" direction="" style="color: #FFF !important; background: #967CFF !important;">Download our
+        HealthOnUs App!
+    </marquee> -->
+    <app-header-component></app-header-component>
+    <router-outlet></router-outlet>
+    <app-footer-component></app-footer-component>
+</div>
+<div>
+    <app-enquiry></app-enquiry>
+    <app-feedbackmodal></app-feedbackmodal>
+</div>

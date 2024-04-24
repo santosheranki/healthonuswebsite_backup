@@ -1,0 +1,236 @@
+<img [src]="environment?.websiteassetsURL + 'newsmedia/center_img_news.png'" alt="center_img_news_ione"
+  class="img-fluid" title="center_img_news_ione" />
+<div class="text-center bg775AD6">
+
+  <h1 class="text-center text-white font_h2">News and Media Updates</h1>
+
+</div>
+<div class="otherbg">
+
+  <div class="margin_class newsmediau">
+    <div class="container">
+      <div class="row mr-top">
+        <div class="tab fontw600 cursorpointer col-md-auto col-auto text-center" *ngFor="let tab of tabNames"
+          (click)="selectTab(tab.CategoryType)">
+          <span [class.newsmediatabsactive]="
+              selectedTab === tab.CategoryType ||
+              (selectedTab === 'media' && tab.CategoryType === 'MediaArticles')
+            " class="fs15">
+            {{ tab.Name }}
+          </span>
+        </div>
+      </div>
+      <div class="tab-content mt-4">
+        <!--articles-->
+        <div>
+          <form [formGroup]="myForm">
+            <div class="row" *ngIf="showArticle && !showEvents">
+              <div class="col-sm-12 col-md-auto pb-10">
+
+                <select class="form-select bordercolor" aria-label="First select example"
+                  formControlName="academicYear">
+                  <option value="" disabled selected>
+                    Choose Financial Year
+                  </option>
+                  <option value="1">FY 2024-25</option>
+                </select>
+                <div *ngIf="
+                    academicYear.invalid &&
+                    (academicYear.dirty || academicYear.touched)
+                  " class="text-danger">
+                  Please select Financial Year
+                </div>
+
+              </div>
+              <div class="col-sm-12 col-md-auto">
+
+                <select class="form-select bordercolor" aria-label="Second select example" formControlName="quadrant"
+                  (change)="fetchMediaArticles(mediaCategoryId)">
+                  <option value="" disabled selected>Choose Quadrant</option>
+                  <option value="1">1st-Quadrant</option>
+                  <option value="2">2nd-Quadrant</option>
+                  <option value="3">3rd-Quadrant</option>
+                  <option value="4">4th-Quadrant</option>
+                </select>
+                <div *ngIf="
+                    quadrant.invalid && (quadrant.dirty || quadrant.touched)
+                  " class="text-danger">
+                  Please select Quadrant
+                </div>
+
+              </div>
+            </div>
+
+            <div *ngIf="showArticle && !showEvents">
+              <div *ngFor="let article of articles" class="oneitem">
+                <ng-container>
+                  <div class="row d-flex">
+                    <div class="col-lg-auto col-12">
+                      <img [src]="article.ArticleLogo" alt="ArticleLogo_itwo" class="img-fluid articleimgsizing"
+                        title="ArticleLogo_itwo" />
+
+
+                    </div>
+
+                  </div>
+                  <span class="art_date">{{ article.formattedDate }}</span>
+
+                  <div class="d-flex align-items-center">
+
+                    <!-- <i class="fa-solid fa-newspaper fa-xl color000"></i> -->
+                    <p class="itemcontent">
+                      {{ article.Title }}
+                    </p>
+                  </div>
+
+                  <p class="art_dec">
+                    {{ article.ArticleDescription }}
+                  </p>
+
+                  <div class="d-flex justify-content-end viewfullstory">
+                    <p (click)="gotopage(article.ArticleLink)">
+                      Read More
+                    </p>
+                    <!-- <i
+                      class="fa-solid fa-circle-arrow-right fa-xl mx-3 righticon"
+                      (click)="gotopage(article.ArticleLink)"
+                    ></i> -->
+                  </div>
+
+                </ng-container>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--videos-->
+        <div>
+          <form [formGroup]="videosForm">
+            <div class="row" *ngIf="showVideo && !showEvents">
+              <div class="col-sm-12 col-md-auto pb-10">
+
+                <select class="form-select bordercolor" aria-label="First select example"
+                  formControlName="academicYear">
+                  <option value="" disabled selected>
+                    Choose Financial Year
+                  </option>
+                  <option value="1">FY 2024-25</option>
+                </select>
+                <div *ngIf="
+                    academicYear.invalid &&
+                    (academicYear.dirty || academicYear.touched)
+                  " class="text-danger">
+                  Please select Financial Year
+                </div>
+
+              </div>
+              <div class="col-sm-12 col-md-auto">
+
+                <select class="form-select bordercolor" aria-label="Second select example" formControlName="quadrant"
+                  (change)="fetchVideos(videoCategoryId)">
+                  <option value="" disabled selected>Choose Quadrant</option>
+                  <option value="1">1st-Quadrant</option>
+                  <option value="2">2nd-Quadrant</option>
+                  <option value="3">3rd-Quadrant</option>
+                  <option value="4">4th-Quadrant</option>
+                </select>
+                <div *ngIf="
+                    quadrant.invalid && (quadrant.dirty || quadrant.touched)
+                  " class="text-danger">
+                  Please select Quadrant
+                </div>
+
+              </div>
+            </div>
+
+            <div *ngIf="showVideo && !showEvents" class="video_news">
+              <div class="row" *ngFor="let video of typeVideos">
+                <div class="col-sm-12 col-md-5">
+
+                  <iframe width="560" height="560" [src]="video.safeUrl" title="YouTube video player" frameborder="0"
+                    class="imgresponsiveclass"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowTransparency="true" background="transparent" allowtransparency allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-12 col-md-7 align-self-center">
+                  <p class="fontw600 video_title ">
+                    {{ video.Title }}
+                  </p>
+
+                  <!-- <p class="video_desc">
+                    {{ video.ArticleDescription }}
+                  </p> -->
+
+                  <p class="video_date">
+                    {{ video.formattedDate }}
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--events-->
+        <div>
+          <div class="row" *ngIf="showEvents">
+            <form [formGroup]="eventsForm">
+              <div class="row" *ngIf="showEvents">
+                <!--financial year dropdown-->
+                <div class="col-sm-12 col-md-auto pb-10">
+                  <select class="form-select bordercolor" aria-label="First select example"
+                    formControlName="academicYear">
+                    <option value="" disabled selected>
+                      Choose Financial Year
+                    </option>
+                    <option value="1">FY 2024-25</option>
+                  </select>
+                  <div *ngIf="
+                    academicYear.invalid &&
+                    (academicYear.dirty || academicYear.touched)
+                  " class="text-danger">
+                    Please select Financial Year
+                  </div>
+                </div>
+                <!--quadrant dropdown-->
+                <div class="col-sm-12 col-md-auto">
+                  <select class="form-select bordercolor" aria-label="Second select example" formControlName="quadrant"
+                    (change)="fetchEvents(eventCategoryId)">
+                    <option value="" disabled selected>Choose Quadrant</option>
+                    <option value="1">1st-Quadrant</option>
+                    <option value="2">2nd-Quadrant</option>
+                    <option value="3">3rd-Quadrant</option>
+                    <option value="4">4th-Quadrant</option>
+                  </select>
+                  <div *ngIf="
+                    quadrant.invalid && (quadrant.dirty || quadrant.touched)
+                  " class="text-danger">
+                    Please select Quadrant
+                  </div>
+
+                </div>
+              </div>
+              <div *ngFor="let event of apiresult">
+                <h2 class="eventname">{{event.Name}}</h2>
+                <div class="gallery padding1ems">
+                  <div class="row">
+                    <div *ngFor="let eventPhoto of event?.Events" class="col-6 col-sm-4 col-lg-2 gallery-item">
+                      <img [src]="eventPhoto?.ArticleLink" alt="ArticleLink_ithree" class="img-fluid"
+                        title="ArticleLink_ithree">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" *ngIf="spinner">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</div>

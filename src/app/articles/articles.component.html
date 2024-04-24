@@ -1,0 +1,56 @@
+<div class="articles">
+    <div class="emptyheightdivtwenty"></div>
+    <div class="container">
+        <figure>
+            <img src="../../assets/articles/articlesmainimage.png" alt="articlesmainimage_ione" class="img-fluid" title="articlesmainimage_ione">
+        </figure>
+        <div class="emptyheightdiv"></div>
+        <div class="row">
+            <div class="col-md-4 mb-4" *ngFor="let article of getPaginatedResults()" (click)="gotocard()">
+                <div class="emptyheightdivforty"></div>
+                <div class="card imgesize">
+                    <img class="card-img-top img-fluid imgesize" src="{{ article.imageSrc }}" alt="Card_image_itwo" title="Card_image_itwo">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="basiccard">
+                                    <div class="basiccard-body">{{ article.title }}</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div>
+                                    <p class="articledate">{{ article.date }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emptyheightdivten"></div>
+                        <p class="articlecontent">{{ article.content }}</p>
+                        <div class="emptyheightdivtwenty"></div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <figure>
+                                    <img src="../../assets/articles/JoannaWellickperson.png" alt="JoannaWellickperson_ithree" class="img-fluid"
+                                        title="JoannaWellickperson_ithree">
+                                </figure>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="articleauthor">{{ article.author }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="emptyheightdivthirty"></div>
+            <div class="d-flex justify-content-center">
+                <ngb-pagination [collectionSize]="articles.length" [(page)]="currentPage" [pageSize]="itemsPerPage"
+                    (pageChange)="onPageChange($event)" [maxSize]="5" size="md">
+                    <ng-template ngbPaginationPrevious>Prev</ng-template>
+                    <ng-template ngbPaginationNext>Next</ng-template>
+                </ngb-pagination>
+            </div>
+            <div class="emptyheightdivseventy"></div>
+        </div>
+    </div>
+    <app-common-download></app-common-download>
+</div>
